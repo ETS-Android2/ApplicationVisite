@@ -9,4 +9,6 @@
 
     <string name="hello_first_fragment">JE SUIS LA PREMIERE PAGE</string>
     <string name="hello_second_fragment">JE SUIS LA SECONDE PAGE</string>
+
+    <string name="welcome_message">Bienvenue à :</string>
 </resources>
