@@ -23,26 +23,23 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_height="match_parent"
         tools:ignore="MissingConstraints">
-
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_cacaouette"
-            android:layout_marginBottom="90dp"
+            android:layout_height="match_parent"
             android:layout_marginTop="90dp"
-            />
+            android:layout_marginBottom="90dp"
+            android:src="@drawable/ic_cacaouette" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/qrButton"
-            app:backgroundTint="@color/vert_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
             android:layout_margin="@dimen/margin_default"
             android:src="@drawable/ic_dialog_qrcode"
+            app:backgroundTint="@color/vert_logo"
             tools:ignore="MissingConstraints" />
     </FrameLayout>
 
