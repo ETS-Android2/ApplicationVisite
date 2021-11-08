@@ -3,8 +3,10 @@ package com.example.applicationvisite;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.budiyev.android.codescanner.CodeScanner;
@@ -14,6 +16,7 @@ import com.google.zxing.Result;
 
 public class QrActivity extends AppCompatActivity {
     private CodeScanner mCodeScanner;
+    private Button buttonback;
     String resScan = null;
 
     @Override
@@ -21,8 +24,17 @@ public class QrActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr);
 
-        scanQR();
+        buttonback = (Button) findViewById(R.id.backToMainActivity);
+        buttonback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainActivity = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(mainActivity);
+                finish();
+            }
+        });
 
+        scanQR();
         System.out.println("Résultat du scan : " + resScan);
     }
 
