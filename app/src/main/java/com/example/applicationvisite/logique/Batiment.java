@@ -11,14 +11,19 @@ public class Batiment implements Lieux{
     String nom;
     String id;
     String descrption;
+    String lienVideo;
 
-    private Batiment(HashSet<Lieux> listeLieuxInteret) {
+    private Batiment(HashSet<Lieux> listeLieuxInteret, String nom, String id, String descrption, String lienVideo) {
         this.listeLieuxInteret =listeLieuxInteret;
+        this.nom = nom;
+        this.id = id;
+        this.descrption = descrption;
+        this.lienVideo = lienVideo;
     }
 
-    public Batiment getInstanceBat(HashSet<Lieux> listeLieuxInteret){
+    public Batiment getInstanceBat(HashSet<Lieux> listeLieuxInteret, String nom, String id, String descrption, String lienVideo){
         if (instance == null){
-            instance = new Batiment(listeLieuxInteret);
+            instance = new Batiment(listeLieuxInteret, nom, id, descrption, lienVideo);
             return instance;
         }
         else {
@@ -26,20 +31,24 @@ public class Batiment implements Lieux{
         }
     }
 
-
     @Override
     public String getId() {
-        return this.id;
+        return id;
     }
 
     @Override
     public String getNom() {
-        return this.nom;
+        return nom;
     }
 
     @Override
     public String getDescription() {
-        return this.descrption;
+        return descrption;
+    }
+
+    @Override
+    public String getLienVideo() {
+        return lienVideo;
     }
 
     @Override

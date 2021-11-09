@@ -16,4 +16,9 @@ public class AutreLieu implements Lieux{
     public String getDescription() {
         return null;
     }
+
+    @Override
+    public String getLienVideo() {
+        return null;
+    }
 }
