@@ -3,5 +3,6 @@
     <dimen name="margin_default">20dp</dimen>
 
     <dimen name="title_default">25sp</dimen>
+    <dimen name="padding_default">20dp</dimen>
 
 </resources>

@@ -48,6 +48,8 @@ public class QrActivity extends AppCompatActivity {
             public void onDecoded(@NonNull final Result result) {
                 //resultat !!!
                 resScan = result.getText();
+                Intent detailviewactivity = new Intent(getApplicationContext(),DetailViewActivity.class);
+                startActivity(detailviewactivity);
                 finish();
             }
         });
