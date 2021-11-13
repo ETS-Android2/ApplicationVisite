@@ -46,9 +46,20 @@ public class QrActivity extends AppCompatActivity {
         mCodeScanner.setDecodeCallback(new DecodeCallback() {
             @Override
             public void onDecoded(@NonNull final Result result) {
-                //resultat !!!
+                //resultat du scan
                 resScan = result.getText();
+
+                //Encapsulation du résultat pour transmission dans la vue suivante
+                Bundle bundle = new Bundle();
+                bundle.putString("id_decoded",resScan);
+
+                //création de la nouvelle fenêtre
                 Intent detailviewactivity = new Intent(getApplicationContext(),DetailViewActivity.class);
+
+                //ajout de l'encapsulation
+                detailviewactivity.putExtras(bundle);
+
+                //lancement activité
                 startActivity(detailviewactivity);
                 finish();
             }
