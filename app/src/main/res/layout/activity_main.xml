@@ -4,45 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#bdcd00">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_default"
+        android:text="@string/descover"
+        android:textColor="@color/noir_logo"
+        android:textSize="@dimen/title_default"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/infobutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/vert_logo"
+        android:src="@drawable/ic_info"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="@dimen/margin_default"/>
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="#bdcd00"
-        tools:ignore="MissingConstraints">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/descover"
-            android:layout_margin="@dimen/margin_default"
-            android:textSize="@dimen/title_default"/>
-
-    </FrameLayout>
-
-    <FrameLayout
+        android:id="@+id/frameLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="40dp"
+        android:background="#fff"
+        android:layout_marginTop="70dp"
         tools:ignore="MissingConstraints">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="90dp"
             android:layout_marginBottom="90dp"
-            android:src="@drawable/ic_cacaouette" />
+            android:src="@drawable/img_plan_iut"
+            android:contentDescription="plan du campus" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/qrButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="77dp"
             android:layout_gravity="bottom|center"
             android:layout_margin="@dimen/margin_default"
             android:src="@drawable/ic_dialog_qrcode"
-            app:backgroundTint="@color/vert_logo"
-            tools:ignore="MissingConstraints" />
+            app:backgroundTint="@color/bleu_logo"
+            tools:ignore="MissingConstraints"
+            android:contentDescription="bouton scan qrCode" />
     </FrameLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/info_scan_qrcode"
+        android:textColor="@color/noir_logo"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
 
 
 
