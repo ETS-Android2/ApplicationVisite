@@ -10,7 +10,7 @@ import com.example.applicationvisite.logique.BatimentRepository;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
-    private final long BOOT_DELAY = 4000;
+    private final long BOOT_DELAY = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +20,11 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         //Chargement des données de la BD
             //création des répertoires
-            //BatimentRepository repository_batiment = new BatimentRepository();
+            BatimentRepository repository_batiment = new BatimentRepository();
 
 
             //mise à jour liste
-            //repository_batiment.updateData();
+            repository_batiment.updateData();
 
         //code éxécuté après les 4 secondes
         Runnable run = new Runnable() {

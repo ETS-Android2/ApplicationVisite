@@ -15,20 +15,23 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import kotlin.Unit;
+
 public class BatimentRepository {
 
     //Connecter à la base de données
-    protected FirebaseDatabase database = FirebaseDatabase.getInstance();
-    protected DatabaseReference databaseRef = database.getReference("batiments");
+    DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference("batiments");
 
 
     //Stocker les informations dans une liste
-    public static ArrayList<Batiment> batimentsListe = new ArrayList<>();
+    static ArrayList<Batiment> batimentsListe = new ArrayList<>();
 
-
+/*
     public static ArrayList<Batiment> getBatimentsListe() {
         return batimentsListe;
     }
+
+ */
 
     public void updateData(){
 
@@ -50,14 +53,13 @@ public class BatimentRepository {
                     if (batiment!=null){
                         batimentsListe.add(batiment);
                     }
-
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 // Failed to read value
-                Log.w(TAG, "Failed to read value.", databaseError.toException());
+                System.out.println("--------impossible de lire des données------------");
             }
         });
 
