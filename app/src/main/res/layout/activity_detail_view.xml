@@ -5,7 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailViewActivity">
-
+<!--
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <ImageButton
             android:id="@+id/button_close"
             android:layout_width="wrap_content"
@@ -25,11 +29,75 @@
             app:layout_constraintEnd_toEndOf="parent"
             tools:ignore="MissingConstraints" />
 
-            <FrameLayout
-                android:id="@+id/fragment_container_detailview"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="70dp"
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".DetailViewActivity"
+            android:orientation="vertical"
+            android:id="@+id/batiment_layout">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_default"
+                android:text="@string/title_lieux_dinteret"
+                android:textColor="@color/noir_logo"
+                android:textSize="18sp"
                 />
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/img_bat_a"
+                        android:layout_margin="@dimen/margin_default"
+                        />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/img_cafet_crous"
+                        android:layout_margin="@dimen/margin_default"
+                        />
+
+                    <ImageView
+
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/img_bat_a"
+                        android:layout_margin="@dimen/margin_default"
+                        />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/img_cafet_crous"
+                        android:layout_margin="@dimen/margin_default"
+                        />
+                    <ImageView
+
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/img_bat_a"
+                        android:layout_margin="@dimen/margin_default"
+                        />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/img_cafet_crous"
+                        android:layout_margin="@dimen/margin_default"
+                        />
+                </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+-->
 </androidx.constraintlayout.widget.ConstraintLayout>

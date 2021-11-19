@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.applicationvisite.logique.BatimentRepository;
+
 public class SplashScreenActivity extends AppCompatActivity {
 
     private final long BOOT_DELAY = 4000;
@@ -15,6 +17,14 @@ public class SplashScreenActivity extends AppCompatActivity {
         //redirige vers la page principale après 4 secondes
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+
+        //Chargement des données de la BD
+            //création des répertoires
+            //BatimentRepository repository_batiment = new BatimentRepository();
+
+
+            //mise à jour liste
+            //repository_batiment.updateData();
 
         //code éxécuté après les 4 secondes
         Runnable run = new Runnable() {

@@ -5,6 +5,5 @@ public interface Lieux {
     String getId();
     String getNom();
     String getDescription();
-    String getLienVideo();
 
 }
