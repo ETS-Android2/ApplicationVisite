@@ -5,11 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailViewActivity">
-<!--
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/scroll"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
+
         <ImageButton
             android:id="@+id/button_close"
             android:layout_width="wrap_content"
@@ -29,17 +26,74 @@
             app:layout_constraintEnd_toEndOf="parent"
             tools:ignore="MissingConstraints" />
 
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             tools:context=".DetailViewActivity"
             android:orientation="vertical"
-            android:id="@+id/batiment_layout">
+            android:layout_marginTop="50dp">
 
+            <TextView
+                android:id="@+id/text_bat_name"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_default"
+                android:textColor="@color/noir_logo"
+                android:text="@string/item_bat_name" />
 
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/img_bat_a"
+                android:layout_margin="@dimen/margin_default"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_default"
+                android:text="@string/title_description"
+                android:textColor="@color/noir_logo"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:id="@+id/text_bat_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:textColor="@color/noir_logo"
+                android:textSize="15sp"
+                android:text="@string/item_bat_description"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_default"
+                android:text="@string/title_lien_utiles"
+                android:textColor="@color/noir_logo"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:id="@+id/text_bat_lienvideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:autoLink="web"
+                android:clickable="true"
+                android:text="@string/item_bat_lienvideo"
+                android:textColor="@color/bleu_logo"
+                android:focusable="true" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -50,54 +104,7 @@
                 android:textSize="18sp"
                 />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView
-
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/img_bat_a"
-                        android:layout_margin="@dimen/margin_default"
-                        />
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/img_cafet_crous"
-                        android:layout_margin="@dimen/margin_default"
-                        />
-
-                    <ImageView
-
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/img_bat_a"
-                        android:layout_margin="@dimen/margin_default"
-                        />
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/img_cafet_crous"
-                        android:layout_margin="@dimen/margin_default"
-                        />
-                    <ImageView
-
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/img_bat_a"
-                        android:layout_margin="@dimen/margin_default"
-                        />
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/img_cafet_crous"
-                        android:layout_margin="@dimen/margin_default"
-                        />
-                </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
--->
+
 </androidx.constraintlayout.widget.ConstraintLayout>
