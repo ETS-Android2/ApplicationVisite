@@ -19,6 +19,8 @@ import kotlin.Unit;
 
 public class BatimentRepository {
 
+
+
     //Connecter à la base de données
     DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference("batiments");
 
@@ -63,6 +65,11 @@ public class BatimentRepository {
             }
         });
 
+    }
+
+    // getter
+    public static ArrayList<Batiment> getBatimentsListe() {
+        return batimentsListe;
     }
 
 }

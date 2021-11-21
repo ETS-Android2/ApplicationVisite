@@ -6,7 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.applicationvisite.logique.Batiment;
 import com.example.applicationvisite.logique.BatimentRepository;
+
+import java.util.ArrayList;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
@@ -26,13 +29,18 @@ public class SplashScreenActivity extends AppCompatActivity {
             //mise à jour liste
             repository_batiment.updateData();
 
+
+
         //code éxécuté après les 4 secondes
         Runnable run = new Runnable() {
             @Override
             public void run() {
                 Intent welcomeActivity = new Intent(getApplicationContext(),WelcomeActivity.class);
                 startActivity(welcomeActivity);
-                finish();
+
+                ArrayList<Batiment> testDebug = repository_batiment.getBatimentsListe();
+
+                //finish();
             }
         };
         //Attente des 4 secondes avant de run
