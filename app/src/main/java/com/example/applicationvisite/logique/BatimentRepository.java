@@ -7,6 +7,8 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -19,25 +21,19 @@ import kotlin.Unit;
 
 public class BatimentRepository {
 
-
-
     //Connecter à la base de données
-    DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference("batiments");
+    private DatabaseReference databaseRef = FirebaseDatabase.getInstance("https://applicationvisite-default-rtdb.europe-west1.firebasedatabase.app/").getReference("batiments");
 
 
     //Stocker les informations dans une liste
-    static ArrayList<Batiment> batimentsListe = new ArrayList<>();
+    private ArrayList<Batiment> batimentsListe = new ArrayList<>();
 
-/*
-    public static ArrayList<Batiment> getBatimentsListe() {
-        return batimentsListe;
-    }
 
- */
 
     public void updateData(){
 
         //absorber les données depuis la dataref -> liste de batiments
+
 
         databaseRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -51,10 +47,9 @@ public class BatimentRepository {
                     //construire un object batiment
                     Batiment batiment = ds.getValue(Batiment.class);
 
-                    // vérifier plante non null avant ajout à la liste
-                    if (batiment!=null){
-                        batimentsListe.add(batiment);
-                    }
+                    Log.d(TAG, "Value true is: " + batiment);
+
+                    batimentsListe.add(batiment);
                 }
             }
 
@@ -68,7 +63,7 @@ public class BatimentRepository {
     }
 
     // getter
-    public static ArrayList<Batiment> getBatimentsListe() {
+    public ArrayList<Batiment> getBatimentsListe() {
         return batimentsListe;
     }
 

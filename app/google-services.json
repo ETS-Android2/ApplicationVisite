@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "376360554352",
+    "firebase_url": "https://applicationvisite-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "applicationvisite",
     "firebase_url": "https://applicationvisite-default-rtdb.europe-west1.firebasedatabase.app/",
     "storage_bucket": "applicationvisite.appspot.com"

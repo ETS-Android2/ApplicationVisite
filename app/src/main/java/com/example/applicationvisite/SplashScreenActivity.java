@@ -1,10 +1,13 @@
 package com.example.applicationvisite;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 
 import com.example.applicationvisite.logique.Batiment;
 import com.example.applicationvisite.logique.BatimentRepository;
@@ -14,6 +17,7 @@ import java.util.ArrayList;
 public class SplashScreenActivity extends AppCompatActivity {
 
     private final long BOOT_DELAY = 3000;
+    private ArrayList<Batiment> sharedList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +34,6 @@ public class SplashScreenActivity extends AppCompatActivity {
             repository_batiment.updateData();
 
 
-
         //code éxécuté après les 4 secondes
         Runnable run = new Runnable() {
             @Override
@@ -38,10 +41,17 @@ public class SplashScreenActivity extends AppCompatActivity {
                 Intent welcomeActivity = new Intent(getApplicationContext(),WelcomeActivity.class);
                 startActivity(welcomeActivity);
 
-                ArrayList<Batiment> testDebug = repository_batiment.getBatimentsListe();
+                //Collecte des données de la BD
+                sharedList = new ArrayList<>();
+                for (Batiment bat: repository_batiment.getBatimentsListe()) {
+                    Batiment copy = new Batiment(bat.getBat_nom(),bat.getBat_id(),bat.getBat_description(), bat.getBat_id_img());
+                    sharedList.add(copy);
+                }
+                Log.d(TAG, "___________Nouvelle liste partagée_________" + sharedList);
 
-                //finish();
+                finish();
             }
+
         };
         //Attente des 4 secondes avant de run
         new Handler().postDelayed(run,BOOT_DELAY);
