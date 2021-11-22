@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class SplashScreenActivity extends AppCompatActivity {
 
     private final long BOOT_DELAY = 3000;
-    private ArrayList<Batiment> sharedList;
+    private static ArrayList<Batiment> sharedList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,5 +55,9 @@ public class SplashScreenActivity extends AppCompatActivity {
         };
         //Attente des 4 secondes avant de run
         new Handler().postDelayed(run,BOOT_DELAY);
+    }
+
+    public static ArrayList<Batiment> getSharedList() {
+        return sharedList;
     }
 }

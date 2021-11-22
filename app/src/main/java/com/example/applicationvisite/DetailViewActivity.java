@@ -1,5 +1,7 @@
 package com.example.applicationvisite;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -10,6 +12,7 @@ import android.content.ContextParams;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.util.Linkify;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -38,7 +41,7 @@ public class DetailViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_view);
         //bouton
-        buttonclose = (ImageButton) findViewById(R.id.button_close);
+        buttonclose = (ImageButton) findViewById(R.id.button_close2);
         buttonclose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,12 +60,9 @@ public class DetailViewActivity extends AppCompatActivity {
         toast_test.show();
 
         //Création dynamique de la vue
-        Batiment bat_a = new Batiment("Batiment A","bat_a","Description............................................................................................................................","img_bat_a");
-        Batiment bat_b = new Batiment("Batiment B","bat_b","Description............................................................................................................................","img_bat_a");
-        Batiment bat_c = new Batiment("Batiment C","bat_c","Description............................................................................................................................","img_bat_a");
-        listeBatiments.add(bat_a);
-        listeBatiments.add(bat_b);
-        listeBatiments.add(bat_c);
+        listeBatiments = SplashScreenActivity.getSharedList();
+
+        Log.d(TAG, "___________Nouvelle liste partagée______,evoievnenonebn___" + listeBatiments);
 
         boolean displayed = false;
         for (Batiment bat : listeBatiments) {
