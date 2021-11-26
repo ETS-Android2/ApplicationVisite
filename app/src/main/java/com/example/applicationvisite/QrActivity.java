@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.budiyev.android.codescanner.CodeScanner;
 import com.budiyev.android.codescanner.CodeScannerView;
@@ -54,7 +53,7 @@ public class QrActivity extends AppCompatActivity {
                 bundle.putString("id_decoded",resScan);
 
                 //création de la nouvelle fenêtre
-                Intent detailviewactivity = new Intent(getApplicationContext(),DetailViewActivity.class);
+                Intent detailviewactivity = new Intent(getApplicationContext(), DetailBatimentActivity.class);
 
                 //ajout de l'encapsulation
                 detailviewactivity.putExtras(bundle);

@@ -13,17 +13,23 @@ public class Batiment{
     String bat_id;
     String bat_description;
     String bat_id_img;
+    boolean visited;
 
-    public Batiment(String bat_nom, String bat_id, String bat_description, String bat_id_img) {
+    public Batiment(String bat_nom, String bat_id, String bat_description, String bat_id_img, boolean visited) {
         //this.listeLieuxInteret = new LinkedList<>();
         this.bat_nom = bat_nom;
         this.bat_id = bat_id;
         this.bat_description = bat_description;
         this.bat_id_img = bat_id_img;
+        this.visited=visited;
     }
 
     public Batiment(){
 
+    }
+
+    public boolean isVisited() {
+        return visited;
     }
 
     public String getBat_nom() {

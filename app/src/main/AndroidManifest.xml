@@ -18,7 +18,7 @@
             android:name=".InfoActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailViewActivity"
+            android:name=".DetailBatimentActivity"
             android:exported="false" />
         <activity
             android:name=".QrActivity"

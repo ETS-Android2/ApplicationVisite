@@ -1,53 +1,35 @@
 package com.example.applicationvisite.logique;
 
-import java.util.HashSet;
+public class Departement{
 
-public class Departement implements Lieux{
+    String dep_nom;
+    String dep_id;
+    String dep_description;
+    String dep_lienvideo;
 
-    Departement instance;
-    HashSet<Lieux> listeLieuxInteret;
-
-    String nom;
-    String id;
-    String descrption;
-    String lienVideo;
-
-    private Departement(HashSet<Lieux> listeLieuxInteret, String nom, String id, String descrption, String lienVideo) {
-        this.listeLieuxInteret =listeLieuxInteret;
-        this.nom = nom;
-        this.id = id;
-        this.descrption = descrption;
-        this.lienVideo = lienVideo;
+    public Departement(String dep_nom, String dep_id, String dep_description, String dep_lienvideo) {
+        this.dep_nom = dep_nom;
+        this.dep_id = dep_id;
+        this.dep_description = dep_description;
+        this.dep_lienvideo = dep_lienvideo;
     }
 
-    public Departement getInstanceBat(HashSet<Lieux> listeLieuxInteret, String nom, String id, String descrption, String lienVideo){
-        if (instance == null){
-            instance = new Departement(listeLieuxInteret, nom, id, descrption, lienVideo);
-            return instance;
-        }
-        else {
-            return instance;
-        }
+    public Departement() {
     }
 
-    @Override
-    public String getId() {
-        return id;
+    public String getDep_nom() {
+        return dep_nom;
     }
 
-    @Override
-    public String getNom() {
-        return nom;
+    public String getDep_id() {
+        return dep_id;
     }
 
-    @Override
-    public String getDescription() {
-        return descrption;
+    public String getDep_description() {
+        return dep_description;
     }
 
-
-    public String getLienVideo() {
-        return lienVideo;
+    public String getDep_lienvideo() {
+        return dep_lienvideo;
     }
-
 }

@@ -27,7 +27,7 @@ import com.example.applicationvisite.logique.BatimentRepository;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class DetailViewActivity extends AppCompatActivity {
+public class DetailBatimentActivity extends AppCompatActivity {
 
     ImageButton buttonclose;
     String idQrCode ="";
@@ -62,12 +62,11 @@ public class DetailViewActivity extends AppCompatActivity {
         //Création dynamique de la vue
         listeBatiments = SplashScreenActivity.getSharedList();
 
-        Log.d(TAG, "___________Nouvelle liste partagée______,evoievnenonebn___" + listeBatiments);
-
         boolean displayed = false;
         for (Batiment bat : listeBatiments) {
             if (idQrCode.contains(bat.getBat_id())){
                 displayed =true;
+                //bat.isVisited()=true;
                 TextView textView = findViewById(R.id.text_bat_name);
                 textView.setText(bat.getBat_nom());
                 //TODO faire la suite de l'affichage dynamique
@@ -78,5 +77,12 @@ public class DetailViewActivity extends AppCompatActivity {
             startActivity(mainactivity);
             finish();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent mainactivity = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(mainactivity);
+        finish();
     }
 }
