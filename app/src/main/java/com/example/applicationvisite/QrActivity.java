@@ -52,15 +52,47 @@ public class QrActivity extends AppCompatActivity {
                 Bundle bundle = new Bundle();
                 bundle.putString("id_decoded",resScan);
 
-                //création de la nouvelle fenêtre
-                Intent detailviewactivity = new Intent(getApplicationContext(), DetailBatimentActivity.class);
+                if (resScan.contains("bat_")){
+                    //création de la nouvelle fenêtre
+                    Intent detailviewactivity = new Intent(getApplicationContext(), DetailBatimentActivity.class);
 
-                //ajout de l'encapsulation
-                detailviewactivity.putExtras(bundle);
+                    //ajout de l'encapsulation
+                    detailviewactivity.putExtras(bundle);
 
-                //lancement activité
-                startActivity(detailviewactivity);
-                finish();
+                    //lancement activité
+                    startActivity(detailviewactivity);
+                    finish();
+                }
+                else if (resScan.contains("dep_")){
+                    //création de la nouvelle fenêtre
+                    Intent detailviewactivity = new Intent(getApplicationContext(), DetailDepartementActivity.class);
+
+                    //ajout de l'encapsulation
+                    detailviewactivity.putExtras(bundle);
+
+                    //lancement activité
+                    startActivity(detailviewactivity);
+                    finish();
+                }
+                /*
+                else if (resScan.contains("autrelieu_")){
+                    //création de la nouvelle fenêtre
+                    Intent detailviewactivity = new Intent(getApplicationContext(), DetailAutreLieuActivity.class);
+
+                    //ajout de l'encapsulation
+                    detailviewactivity.putExtras(bundle);
+
+                    //lancement activité
+                    startActivity(detailviewactivity);
+                    finish();
+                }
+
+                 */
+                else {
+                    Intent mainactivity = new Intent(getApplicationContext(),MainActivity.class);
+                    startActivity(mainactivity);
+                    finish();
+                }
             }
         });
         scannerView.setOnClickListener(new View.OnClickListener() {

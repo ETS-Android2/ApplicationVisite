@@ -26,4 +26,5 @@
     <string name="title_description">Description :</string>
     <string name="title_lien_utiles">Liens Utiles :</string>
     <string name="title_lieux_dinteret">Lieux d\'interêts :</string>
+    <string name="item_dep_name">Département Informatique</string>
 </resources>
