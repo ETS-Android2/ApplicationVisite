@@ -55,6 +55,7 @@ public class Batiment implements Lieux{
                 ", bat_id='" + bat_id + '\'' +
                 ", bat_description='" + bat_description + '\'' +
                 ", bat_id_img='" + bat_id_img + '\'' +
+                ", visited=" + visited +
                 '}';
     }
 }
