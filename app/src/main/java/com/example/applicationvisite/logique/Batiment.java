@@ -5,7 +5,7 @@ import com.google.firebase.database.IgnoreExtraProperties;
 import java.util.LinkedList;
 
 @IgnoreExtraProperties
-public class Batiment{
+public class Batiment implements Lieux{
 
     //LinkedList<Lieux> listeLieuxInteret;
 

@@ -49,9 +49,9 @@ public class DetailDepartementActivity extends AppCompatActivity {
 
         //Création dynamique de la vue
         //listeBatiments = SplashScreenActivity.getSharedList();
-        Departement dep_info = new Departement("Département Informatique","dep_info", "descriiiiiiiiptionnnnnnn", "https://youtube.com");
-        Departement dep_gea = new Departement("Département Gestion des Administrations","dep_gea", "la vente et tout la...", "https://youtube.com");
-        Departement dep_tc = new Departement("Département info","dep_info", "zumbacafew", "https://youtube.com");
+        Departement dep_info = new Departement("Département Informatique","dep_info", "descriiiiiiiiptionnnnnnn", "https://youtube.com","bat_k");
+        Departement dep_gea = new Departement("Département Gestion des Administrations","dep_gea", "la vente et tout la...", "https://youtube.com","bat_k");
+        Departement dep_tc = new Departement("Département info","dep_info", "zumbacafew", "https://youtube.com","bat_k");
         listeDepartement.add(dep_info);
         listeDepartement.add(dep_gea);
         listeDepartement.add(dep_tc);

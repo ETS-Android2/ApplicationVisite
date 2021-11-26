@@ -74,8 +74,8 @@ public class QrActivity extends AppCompatActivity {
                     startActivity(detailviewactivity);
                     finish();
                 }
-                /*
-                else if (resScan.contains("autrelieu_")){
+
+                else if (resScan.contains("al_")){
                     //création de la nouvelle fenêtre
                     Intent detailviewactivity = new Intent(getApplicationContext(), DetailAutreLieuActivity.class);
 
@@ -86,8 +86,6 @@ public class QrActivity extends AppCompatActivity {
                     startActivity(detailviewactivity);
                     finish();
                 }
-
-                 */
                 else {
                     Intent mainactivity = new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(mainactivity);
