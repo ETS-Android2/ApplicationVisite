@@ -26,7 +26,7 @@ public class BatimentRepository {
 
 
     //Stocker les informations dans une liste
-    private ArrayList<Batiment> batimentsListe = new ArrayList<>();
+    private static ArrayList<Batiment> batimentsListe = new ArrayList<>();
 
 
 
@@ -63,7 +63,7 @@ public class BatimentRepository {
     }
 
     // getter
-    public ArrayList<Batiment> getBatimentsListe() {
+    public static ArrayList<Batiment> getBatimentsListe() {
         return batimentsListe;
     }
 
