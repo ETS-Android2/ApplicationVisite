@@ -24,13 +24,13 @@ public class BDRepository {
     //Connecter à la base de données
     private DatabaseReference databaseRef = FirebaseDatabase.getInstance("https://applicationvisite-default-rtdb.europe-west1.firebasedatabase.app/").getReference("batiments");
     private DatabaseReference databaseRef2 = FirebaseDatabase.getInstance("https://applicationvisite-default-rtdb.europe-west1.firebasedatabase.app/").getReference("departements");
-    //private DatabaseReference databaseRef3 = FirebaseDatabase.getInstance("https://applicationvisite-default-rtdb.europe-west1.firebasedatabase.app/").getReference("autreslieux");
+    private DatabaseReference databaseRef3 = FirebaseDatabase.getInstance("https://applicationvisite-default-rtdb.europe-west1.firebasedatabase.app/").getReference("autreslieux");
 
     //récupérer les reférences
     //Stocker les informations dans une liste
     private static ArrayList<Batiment> batimentsListe = new ArrayList<>();
     private static ArrayList<Departement> departementsListe = new ArrayList<>();
-    //private static ArrayList<AutreLieu> autresLieuxListe = new ArrayList<>();
+    private static ArrayList<AutreLieu> autresLieuxListe = new ArrayList<>();
 
 
 
@@ -84,7 +84,6 @@ public class BDRepository {
                     departementsListe.add(departement);
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 // Failed to read value
@@ -92,7 +91,33 @@ public class BDRepository {
                 System.out.println("--------impossible de lire des données------------");
             }
         });
+    }
+    public void updateDataAL() {
+        //absorber les données depuis la dataref -> liste de batiments
+        databaseRef3.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //retirer les anciennes données
+                autresLieuxListe.clear();
 
+                //récolter la liste
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+
+                    //construire un object batiment
+                    AutreLieu autreLieu = ds.getValue(AutreLieu.class);
+
+                    Log.d(TAG, "Value true is: " + autreLieu);
+
+                    autresLieuxListe.add(autreLieu);
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // Failed to read value
+                //créer une page d'erreur
+                System.out.println("--------impossible de lire des données------------");
+            }
+        });
     }
 
     // getter
@@ -102,5 +127,9 @@ public class BDRepository {
 
     public static ArrayList<Departement> getDepartementsListe() {
         return departementsListe;
+    }
+
+    public static ArrayList<AutreLieu> getAutresLieuxListe() {
+        return autresLieuxListe;
     }
 }

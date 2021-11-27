@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 
+import com.example.applicationvisite.logique.AutreLieu;
 import com.example.applicationvisite.logique.Batiment;
 import com.example.applicationvisite.logique.BDRepository;
 import com.example.applicationvisite.logique.Departement;
@@ -20,6 +21,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     private final long BOOT_DELAY = 4000;
     private static ArrayList<Batiment> sharedBatList;
     private static ArrayList<Departement> sharedDepList;
+    private static ArrayList<AutreLieu> sharedAutreLieuList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +31,13 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         //Chargement des données de la BD
             //création des répertoires
-            BDRepository repository_batiment = new BDRepository();
+            BDRepository bdRepository = new BDRepository();
 
 
             //mise à jour liste
-            repository_batiment.updateDataBat();
-            repository_batiment.updateDataDep();
+            bdRepository.updateDataBat();
+            bdRepository.updateDataDep();
+            bdRepository.updateDataAL();
 
 
         //code éxécuté après les 4 secondes
@@ -46,19 +49,25 @@ public class SplashScreenActivity extends AppCompatActivity {
 
                 //Collecte des données de la BD
                 sharedBatList = new ArrayList<>();
-                for (Batiment bat: repository_batiment.getBatimentsListe()) {
+                for (Batiment bat: bdRepository.getBatimentsListe()) {
                     Batiment copy = new Batiment(bat.getBat_nom(),bat.getBat_id(),bat.getBat_description(), bat.getBat_id_img(), bat.isVisited());
                     sharedBatList.add(copy);
                 }
                 Log.d(TAG, "___________Nouvelle liste partagée batiments_________" + sharedBatList);
 
                 sharedDepList = new ArrayList<>();
-                for (Departement dep: repository_batiment.getDepartementsListe()) {
+                for (Departement dep: bdRepository.getDepartementsListe()) {
                     Departement copy = new Departement(dep.getDep_nom(),dep.getDep_id(),dep.getDep_description(), dep.getDep_lienvideo(),dep.getDep_mapLocation());
                     sharedDepList.add(copy);
                 }
                 Log.d(TAG, "___________Nouvelle liste partagée départements_________" + sharedDepList);
 
+                sharedAutreLieuList = new ArrayList<>();
+                for (AutreLieu al: bdRepository.getAutresLieuxListe()) {
+                    AutreLieu copy = new AutreLieu(al.getAl_nom(),al.getAl_id(),al.getAl_description(),al.getAl_lienvideo(),al.getHoraires(),al.getAl_mapLocation());
+                    sharedAutreLieuList.add(copy);
+                }
+                Log.d(TAG, "___________Nouvelle liste partagée autrelieux_________" + sharedAutreLieuList);
                 finish();
             }
 
