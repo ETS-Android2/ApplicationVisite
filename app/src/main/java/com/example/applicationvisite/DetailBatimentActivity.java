@@ -1,31 +1,18 @@
 package com.example.applicationvisite;
 
-import static android.content.ContentValues.TAG;
-
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 
-import android.annotation.SuppressLint;
-import android.app.ActionBar;
-import android.content.ContextParams;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.util.Linkify;
-import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.applicationvisite.logique.Batiment;
-import com.example.applicationvisite.logique.BatimentRepository;
+import com.example.applicationvisite.logique.BDRepository;
 
 import java.util.ArrayList;
-import java.util.ResourceBundle;
 
 public class DetailBatimentActivity extends AppCompatActivity {
 
@@ -33,7 +20,7 @@ public class DetailBatimentActivity extends AppCompatActivity {
     String idQrCode ="";
 
     //TODO utiliser la liste de la BD
-    ArrayList<Batiment> listeBatiments = BatimentRepository.getBatimentsListe();
+    ArrayList<Batiment> listeBatiments = BDRepository.getBatimentsListe();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -59,7 +46,7 @@ public class DetailBatimentActivity extends AppCompatActivity {
         toast_test.show();
 
         //Création dynamique de la vue
-        listeBatiments = SplashScreenActivity.getSharedList();
+        listeBatiments = SplashScreenActivity.getSharedBatList();
 
         boolean displayed = false;
         for (Batiment bat : listeBatiments) {

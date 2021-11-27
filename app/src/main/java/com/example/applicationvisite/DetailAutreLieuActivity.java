@@ -10,9 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.applicationvisite.logique.AutreLieu;
-import com.example.applicationvisite.logique.Batiment;
-import com.example.applicationvisite.logique.BatimentRepository;
-import com.example.applicationvisite.logique.Departement;
+import com.example.applicationvisite.logique.BDRepository;
 
 import java.util.ArrayList;
 
@@ -21,7 +19,7 @@ public class DetailAutreLieuActivity extends AppCompatActivity {
     ImageButton buttonclose;
     String idQrCode ="";
 
-    //ArrayList<Batiment> listeBatiments = BatimentRepository.getBatimentsListe();
+    //ArrayList<AutreLieu> listeBatiments = BDRepository.getAutreLieuListe();
     ArrayList<AutreLieu> listeAutreLieu = new ArrayList<>();
 
     @Override

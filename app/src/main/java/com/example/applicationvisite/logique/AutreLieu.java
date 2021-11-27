@@ -44,4 +44,16 @@ public class AutreLieu implements Lieux{
     public String getHoraires() {
         return horaires;
     }
+
+    @Override
+    public String toString() {
+        return "AutreLieu{" +
+                "al_nom='" + al_nom + '\'' +
+                ", al_id='" + al_id + '\'' +
+                ", al_description='" + al_description + '\'' +
+                ", al_lienvideo='" + al_lienvideo + '\'' +
+                ", horaires='" + horaires + '\'' +
+                ", al_mapLocation='" + al_mapLocation + '\'' +
+                '}';
+    }
 }

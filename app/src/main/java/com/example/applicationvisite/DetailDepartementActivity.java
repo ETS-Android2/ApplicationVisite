@@ -9,8 +9,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.applicationvisite.logique.Batiment;
-import com.example.applicationvisite.logique.BatimentRepository;
+import com.example.applicationvisite.logique.BDRepository;
 import com.example.applicationvisite.logique.Departement;
 
 import java.util.ArrayList;
@@ -18,9 +17,6 @@ import java.util.ArrayList;
 public class DetailDepartementActivity extends AppCompatActivity {
     ImageButton buttonclose;
     String idQrCode ="";
-
-    //ArrayList<Batiment> listeBatiments = BatimentRepository.getBatimentsListe();
-    ArrayList<Departement> listeDepartement = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,13 +44,7 @@ public class DetailDepartementActivity extends AppCompatActivity {
         toast_test.show();
 
         //Création dynamique de la vue
-        //listeBatiments = SplashScreenActivity.getSharedList();
-        Departement dep_info = new Departement("Département Informatique","dep_info", "descriiiiiiiiptionnnnnnn", "https://youtube.com","bat_k");
-        Departement dep_gea = new Departement("Département Gestion des Administrations","dep_gea", "la vente et tout la...", "https://youtube.com","bat_k");
-        Departement dep_tc = new Departement("Département info","dep_info", "zumbacafew", "https://youtube.com","bat_k");
-        listeDepartement.add(dep_info);
-        listeDepartement.add(dep_gea);
-        listeDepartement.add(dep_tc);
+        ArrayList<Departement> listeDepartement = BDRepository.getDepartementsListe();
 
         boolean displayed = false;
         for (Departement dep : listeDepartement) {

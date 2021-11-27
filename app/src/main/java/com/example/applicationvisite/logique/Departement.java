@@ -38,4 +38,15 @@ public class Departement implements Lieux{
     public String getDep_lienvideo() {
         return dep_lienvideo;
     }
+
+    @Override
+    public String toString() {
+        return "Departement{" +
+                "dep_nom='" + dep_nom + '\'' +
+                ", dep_id='" + dep_id + '\'' +
+                ", dep_description='" + dep_description + '\'' +
+                ", dep_lienvideo='" + dep_lienvideo + '\'' +
+                ", dep_mapLocation='" + dep_mapLocation + '\'' +
+                '}';
+    }
 }
