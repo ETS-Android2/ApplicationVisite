@@ -28,4 +28,5 @@
     <string name="title_lieux_dinteret">Lieux d\'interêts :</string>
     <string name="item_dep_name">Département Informatique</string>
     <string name="item_al_name">Cafétaria Du Batiment A</string>
+    <string name="title_video">Vidéo de présentation :</string>
 </resources>
