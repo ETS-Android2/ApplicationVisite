@@ -11,14 +11,14 @@
     <ImageButton
         android:id="@+id/button_close2"
         android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_margin="@dimen/margin_default"
         android:contentDescription="fermer"
         android:src="@drawable/ic_close"
         app:layout_constraintBottom_toTopOf="@+id/scroll"
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/rouge_logo"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,ImageContrastCheck" />
 
         <TextView
             android:id="@+id/namedetailview"
@@ -98,14 +98,12 @@
                 android:textColor="@color/bleu_logo"
                 android:focusable="true" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/padding_default"
-                android:text="@string/title_lieux_dinteret"
-                android:textColor="@color/noir_logo"
-                android:textSize="18sp"
-                />
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView"
+                android:name="com.example.applicationvisite.FooterFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
 
         </LinearLayout>
     </ScrollView>

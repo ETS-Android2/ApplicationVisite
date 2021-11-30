@@ -52,7 +52,7 @@ public class DetailBatimentActivity extends AppCompatActivity {
         for (Batiment bat : listeBatiments) {
             if (idQrCode.contains(bat.getBat_id())){
                 displayed =true;
-                //bat.isVisited()=true;
+                bat.setVisited(true);
                 TextView textView = findViewById(R.id.text_bat_name);
                 textView.setText(bat.getBat_nom());
                 //TODO faire la suite de l'affichage dynamique

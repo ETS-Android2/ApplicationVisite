@@ -23,7 +23,7 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 import java.util.ArrayList;
 
-public class DetailDepartementActivity extends YouTubeBaseActivity {
+public class DetailDepartementActivity extends YouTubeBaseActivity{
     ImageButton buttonclose;
     String idQrCode ="";
     YouTubePlayerView mYoutubePlayerView;

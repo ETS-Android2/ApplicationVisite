@@ -12,4 +12,5 @@
     <color name="vert_logo">#bdcd00</color>
     <color name="noir_logo">#1a171b</color>
     <color name="rouge_logo">#b2004b</color>
+    <color name="grey">#C0C0C0</color>
 </resources>

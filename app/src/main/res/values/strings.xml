@@ -27,6 +27,13 @@
     <string name="title_lien_utiles">Liens Utiles :</string>
     <string name="title_lieux_dinteret">Lieux d\'interêts :</string>
     <string name="item_dep_name">Département Informatique</string>
-    <string name="item_al_name">Cafétaria Du Batiment A</string>
+    <string name="item_al_name">Cafétéria Du Batiment A</string>
     <string name="title_video">Vidéo de présentation :</string>
+    <string name="title_horaires">Horaires :</string>
+    <string name="item_al_horaires">Ouvert de 11h à 13h30</string>
+    <string name="item_al_utiles">crous.fr</string>
+    <string name="title_visiteguidee">Votre avancement sur la visite du campus :</string>
+    <string name="bat_pourcentage">5%</string>
+    <string name="content_visiteguidee">Batiment sugéré pour la suite de votre visite :</string>
+    <string name="bat_name">Batiment a</string>
 </resources>

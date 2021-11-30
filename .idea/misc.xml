@@ -5,15 +5,16 @@
       <map>
         <entry key="..\:/Users/thoma/AndroidStudioProjects/ApplicationVisite/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3828125" />
         <entry key="..\:/Users/thoma/AndroidStudioProjects/ApplicationVisite/app/src/main/res/layout/activity_detail_autre_lieu.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/thoma/AndroidStudioProjects/ApplicationVisite/app/src/main/res/layout/activity_detail_departement.xml" value="0.1" />
+        <entry key="..\:/Users/thoma/AndroidStudioProjects/ApplicationVisite/app/src/main/res/layout/activity_detail_departement.xml" value="0.2884371029224905" />
         <entry key="..\:/Users/thoma/AndroidStudioProjects/ApplicationVisite/app/src/main/res/layout/activity_detail_view.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/thoma/AndroidStudioProjects/ApplicationVisite/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/thoma/AndroidStudioProjects/ApplicationVisite/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/thoma/AndroidStudioProjects/ApplicationVisite/app/src/main/res/layout/activity_qr.xml" value="0.1" />
         <entry key="..\:/Users/thoma/AndroidStudioProjects/ApplicationVisite/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="..\:/Users/thoma/AndroidStudioProjects/ApplicationVisite/app/src/main/res/layout/activity_welcome.xml" value="0.25" />
         <entry key="..\:/Users/thoma/AndroidStudioProjects/ApplicationVisite/app/src/main/res/layout/content_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/thoma/AndroidStudioProjects/ApplicationVisite/app/src/main/res/layout/fragment_batiment.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/thoma/AndroidStudioProjects/ApplicationVisite/app/src/main/res/layout/fragment_first.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/thoma/AndroidStudioProjects/ApplicationVisite/app/src/main/res/layout/fragment_footer.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/thoma/AndroidStudioProjects/ApplicationVisite/app/src/main/res/layout/fragment_second.xml" value="0.33" />
         <entry key="..\:/Users/thoma/AndroidStudioProjects/ApplicationVisite/app/src/main/res/menu/menu_main.xml" value="0.20416666666666666" />
       </map>

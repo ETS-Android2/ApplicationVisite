@@ -69,13 +69,31 @@
                 />
 
             <TextView
-                android:id="@+id/text_bat_description"
+                android:id="@+id/text_al_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
                 android:textColor="@color/noir_logo"
                 android:textSize="15sp"
                 android:text="@string/item_bat_description"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_default"
+                android:text="@string/title_horaires"
+                android:textColor="@color/noir_logo"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:id="@+id/text_al_horaires"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:textColor="@color/noir_logo"
+                android:textSize="15sp"
+                android:text="@string/item_al_horaires"
                 />
 
             <TextView
@@ -88,24 +106,15 @@
                 />
 
             <TextView
-                android:id="@+id/text_bat_lienvideo"
+                android:id="@+id/text_al_lienutiles"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
                 android:autoLink="web"
                 android:clickable="true"
-                android:text="@string/item_bat_lienvideo"
+                android:text="@string/item_al_utiles"
                 android:textColor="@color/bleu_logo"
                 android:focusable="true" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/padding_default"
-                android:text="@string/title_lieux_dinteret"
-                android:textColor="@color/noir_logo"
-                android:textSize="18sp"
-                />
 
         </LinearLayout>
     </ScrollView>
