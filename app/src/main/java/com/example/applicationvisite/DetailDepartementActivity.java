@@ -1,10 +1,15 @@
 package com.example.applicationvisite;
 
 import static android.content.ContentValues.TAG;
+import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DownloadManager;
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.*;
@@ -18,10 +23,14 @@ import com.bumptech.glide.Glide;
 import com.example.applicationvisite.logique.BDRepository;
 import com.example.applicationvisite.logique.Departement;
 import com.example.applicationvisite.logique.YoutubeConfig;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
@@ -32,6 +41,9 @@ public class DetailDepartementActivity extends YouTubeBaseActivity{
     Button playButton;
     YouTubePlayer.OnInitializedListener mOnInitializedListener;
     Departement curent_dep = null;
+    Button download_plaquette;
+    FirebaseStorage firebaseStorage;
+    StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +57,15 @@ public class DetailDepartementActivity extends YouTubeBaseActivity{
         String msg_test = "Code scanné : "+ idQrCode;
         Toast toast_test = Toast.makeText(getApplicationContext(),msg_test,Toast.LENGTH_SHORT);
         toast_test.show();
+
+        //Test du download du document
+        download_plaquette = findViewById(R.id.bouton_dl_plaquette);
+        download_plaquette.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                downloadPlaquette();
+            }
+        });
 
         //Création dynamique de la vue
         ArrayList<Departement> listeDepartement = BDRepository.getDepartementsListe();
@@ -113,6 +134,37 @@ public class DetailDepartementActivity extends YouTubeBaseActivity{
                 finish();
             }
         });
+    }
+
+    private void downloadPlaquette() {
+        storageReference = firebaseStorage.getInstance().getReference().child("INFO_BUT_RV_2022.pdf");
+        storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                String msg_test = "Télechargement en cours...";
+                Toast toast_test = Toast.makeText(getApplicationContext(),msg_test,Toast.LENGTH_LONG);
+                toast_test.show();
+
+                String url=uri.toString();
+                downLoadFile(DetailDepartementActivity.this,"INFO_BUT_RV_2022", ".pdf", DIRECTORY_DOWNLOADS,url);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+
+            }
+        });
+    }
+
+    private void downLoadFile(Context context,String fileName, String fileExtention, String destinationDirectory, String url) {
+        DownloadManager downloadManager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
+        Uri uri = Uri.parse(url);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        request.setDestinationInExternalFilesDir(context, destinationDirectory, fileName + fileExtention);
+
+        downloadManager.enqueue(request);
     }
 
     @Override
