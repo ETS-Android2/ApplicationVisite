@@ -164,7 +164,13 @@
                 android:textColor="@color/bleu_logo"
                 android:focusable="true" />
 
-
+            <Button
+                android:id="@+id/bouton_dl_plaquette"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_dep_plaquette"
+                android:layout_gravity="center"
+                />
 
         </LinearLayout>
     </ScrollView>

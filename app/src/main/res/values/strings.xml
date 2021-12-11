@@ -40,4 +40,5 @@
     <string name="title_organisation">Organisation de la formation :</string>
     <string name="title_lien_contact">Contact</string>
     <string name="title_candidature">Candidatures :</string>
+    <string name="item_dep_plaquette">Télécharger\nla plaquette complette</string>
 </resources>

@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.applicationvisite.logique.BDRepository;
 import com.example.applicationvisite.logique.Departement;
 import com.example.applicationvisite.logique.YoutubeConfig;
@@ -68,7 +69,7 @@ public class DetailDepartementActivity extends YouTubeBaseActivity{
                 textView4.setText(dep.getDep_candidature());
 
                 ImageView imageView = findViewById(R.id.dep_image);
-                //Glide.with(this).load(dep.getDep_lienimg()).into(imageView);
+                Glide.with(this).load(dep.getDep_lienimg()).into(imageView);
             }
         }
         if (!displayed){
