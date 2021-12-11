@@ -58,15 +58,6 @@ public class DetailDepartementActivity extends YouTubeBaseActivity{
         Toast toast_test = Toast.makeText(getApplicationContext(),msg_test,Toast.LENGTH_SHORT);
         toast_test.show();
 
-        //Test du download du document
-        download_plaquette = findViewById(R.id.bouton_dl_plaquette);
-        download_plaquette.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                downloadPlaquette();
-            }
-        });
-
         //Création dynamique de la vue
         ArrayList<Departement> listeDepartement = BDRepository.getDepartementsListe();
         boolean displayed = false;
@@ -98,6 +89,15 @@ public class DetailDepartementActivity extends YouTubeBaseActivity{
             startActivity(mainactivity);
             finish();
         }
+
+        //Partie download de la plaquette
+        download_plaquette = findViewById(R.id.bouton_dl_plaquette);
+        download_plaquette.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                downloadPlaquette(curent_dep.getDep_nomplaquette());
+            }
+        });
 
         //Partie intégration youtube
         playButton = (Button) findViewById(R.id.play_button_youtube);
@@ -136,8 +136,8 @@ public class DetailDepartementActivity extends YouTubeBaseActivity{
         });
     }
 
-    private void downloadPlaquette() {
-        storageReference = firebaseStorage.getInstance().getReference().child("INFO_BUT_RV_2022.pdf");
+    private void downloadPlaquette(String nomplaquette) {
+        storageReference = firebaseStorage.getInstance().getReference().child(nomplaquette+".pdf");
         storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
@@ -146,7 +146,7 @@ public class DetailDepartementActivity extends YouTubeBaseActivity{
                 toast_test.show();
 
                 String url=uri.toString();
-                downLoadFile(DetailDepartementActivity.this,"INFO_BUT_RV_2022", ".pdf", DIRECTORY_DOWNLOADS,url);
+                downLoadFile(DetailDepartementActivity.this,nomplaquette, ".pdf", DIRECTORY_DOWNLOADS,url);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
