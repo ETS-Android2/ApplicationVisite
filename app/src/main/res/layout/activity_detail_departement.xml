@@ -63,13 +63,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/padding_default"
-                android:text="@string/title_description"
+                android:text="@string/title_objetifs"
                 android:textColor="@color/noir_logo"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 />
 
             <TextView
-                android:id="@+id/text_bat_description"
+                android:id="@+id/text_bat_objectifs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
@@ -82,31 +83,44 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/padding_default"
-                android:text="@string/title_lien_utiles"
+                android:text="@string/title_organisation"
                 android:textColor="@color/noir_logo"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 />
 
             <TextView
-                android:id="@+id/text_bat_lienvideo"
+                android:id="@+id/text_dep_organisation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
-                android:autoLink="web"
-                android:clickable="true"
-                android:text="@string/item_bat_lienvideo"
-                android:textColor="@color/bleu_logo"
-                android:focusable="true" />
+                android:textColor="@color/noir_logo"
+                android:textSize="15sp"
+                android:text="@string/item_bat_description"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/padding_default"
-                android:text="@string/title_lieux_dinteret"
+                android:text="@string/title_candidature"
                 android:textColor="@color/noir_logo"
+                android:textStyle="bold"
                 android:textSize="18sp"
                 />
+
             <TextView
+                android:id="@+id/text_dep_candidature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:textColor="@color/noir_logo"
+                android:textSize="15sp"
+                android:text="@string/item_bat_description"
+                />
+
+            <TextView
+                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/padding_default"
@@ -127,6 +141,28 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Jouer la vidéo" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_default"
+                android:text="@string/title_lien_contact"
+                android:textColor="@color/noir_logo"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/text_dep_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:autoLink="web"
+                android:clickable="true"
+                android:text="@string/item_bat_lienvideo"
+                android:textColor="@color/bleu_logo"
+                android:focusable="true" />
 
 
 

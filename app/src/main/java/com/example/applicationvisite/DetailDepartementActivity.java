@@ -53,6 +53,18 @@ public class DetailDepartementActivity extends YouTubeBaseActivity{
                 curent_dep = dep;
                 TextView textView = findViewById(R.id.text_dep_name);
                 textView.setText(dep.getDep_nom());
+
+                TextView textView1 = findViewById(R.id.text_bat_objectifs);
+                textView1.setText(dep.getDep_objectifs());
+
+                TextView textView2 =findViewById(R.id.text_dep_organisation);
+                textView2.setText(dep.getDep_organisation());
+
+                TextView textView3 = findViewById(R.id.text_dep_contact);
+                textView3.setText(dep.getDep_contact());
+
+                TextView textView4 = findViewById(R.id.text_dep_candidature);
+                textView4.setText(dep.getDep_candidature());
                 //TODO faire la suite de l'affichage dynamique
             }
         }
@@ -64,6 +76,7 @@ public class DetailDepartementActivity extends YouTubeBaseActivity{
 
         //Partie intégration youtube
         playButton = (Button) findViewById(R.id.play_button_youtube);
+        //playButton.setBackgroundColor(curent_dep.getDep_couleur());
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
