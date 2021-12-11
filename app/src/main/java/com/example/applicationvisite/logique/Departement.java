@@ -11,8 +11,9 @@ public class Departement implements Lieux{
     String dep_organisation;
     String dep_alternance;
     String dep_contact;
+    String dep_lienimg;
 
-    public Departement(String dep_nom, String dep_id, String dep_lienvideo, String dep_mapLocation, String dep_objectifs, String dep_candidature, String dep_organisation, String dep_alternance, String dep_contact) {
+    public Departement(String dep_nom, String dep_id, String dep_lienvideo, String dep_mapLocation, String dep_objectifs, String dep_candidature, String dep_organisation, String dep_alternance, String dep_contact, String dep_lienimg) {
         this.dep_nom = dep_nom;
         this.dep_id = dep_id;
         this.dep_lienvideo = dep_lienvideo;
@@ -22,9 +23,14 @@ public class Departement implements Lieux{
         this.dep_organisation = dep_organisation;
         this.dep_alternance = dep_alternance;
         this.dep_contact = dep_contact;
+        this.dep_lienimg = dep_lienimg;
     }
 
     public Departement() {
+    }
+
+    public String getDep_lienimg() {
+        return dep_lienimg;
     }
 
     public String getDep_objectifs() {
@@ -75,6 +81,7 @@ public class Departement implements Lieux{
                 ", dep_organisation='" + dep_organisation + '\'' +
                 ", dep_alternance='" + dep_alternance + '\'' +
                 ", dep_contact='" + dep_contact + '\'' +
+                ", dep_lienimg='" + dep_lienimg + '\'' +
                 '}';
     }
 }

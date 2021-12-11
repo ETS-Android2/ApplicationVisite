@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.*;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -65,7 +66,9 @@ public class DetailDepartementActivity extends YouTubeBaseActivity{
 
                 TextView textView4 = findViewById(R.id.text_dep_candidature);
                 textView4.setText(dep.getDep_candidature());
-                //TODO faire la suite de l'affichage dynamique
+
+                ImageView imageView = findViewById(R.id.dep_image);
+                //Glide.with(this).load(dep.getDep_lienimg()).into(imageView);
             }
         }
         if (!displayed){
