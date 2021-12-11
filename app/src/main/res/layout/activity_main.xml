@@ -71,7 +71,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="90dp"
             android:layout_marginBottom="90dp"
-            android:src="@drawable/img_plan_iut"
+            android:src="@drawable/img_plan_vertical"
             android:contentDescription="plan du campus" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
