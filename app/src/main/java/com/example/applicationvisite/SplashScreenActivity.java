@@ -50,7 +50,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 //Collecte des données de la BD
                 sharedBatList = new ArrayList<>();
                 for (Batiment bat: bdRepository.getBatimentsListe()) {
-                    Batiment copy = new Batiment(bat.getBat_nom(),bat.getBat_id(),bat.getBat_description(), bat.getBat_id_img(), bat.isVisited());
+                    Batiment copy = new Batiment(bat.getBat_nom(),bat.getBat_id(),bat.getBat_description(), bat.getBat_id_img(), bat.isVisited(), bat.getBat_liste_dep());
                     sharedBatList.add(copy);
                 }
                 Log.d(TAG, "___________Nouvelle liste partagée batiments_________" + sharedBatList);

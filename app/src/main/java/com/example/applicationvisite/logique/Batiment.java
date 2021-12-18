@@ -2,6 +2,7 @@ package com.example.applicationvisite.logique;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 @IgnoreExtraProperties
@@ -13,15 +14,17 @@ public class Batiment implements Lieux{
     String bat_id;
     String bat_description;
     String bat_id_img;
+    String bat_liste_dep;
     boolean visited;
 
-    public Batiment(String bat_nom, String bat_id, String bat_description, String bat_id_img, boolean visited) {
+    public Batiment(String bat_nom, String bat_id, String bat_description, String bat_id_img, boolean visited,String bat_liste_dep) {
         //this.listeLieuxInteret = new LinkedList<>();
         this.bat_nom = bat_nom;
         this.bat_id = bat_id;
         this.bat_description = bat_description;
         this.bat_id_img = bat_id_img;
         this.visited=visited;
+        this.bat_liste_dep = bat_liste_dep;
     }
 
     public Batiment(){
@@ -34,6 +37,10 @@ public class Batiment implements Lieux{
 
     public boolean isVisited() {
         return visited;
+    }
+
+    public String getBat_liste_dep() {
+        return bat_liste_dep;
     }
 
     public String getBat_nom() {
@@ -59,6 +66,7 @@ public class Batiment implements Lieux{
                 ", bat_id='" + bat_id + '\'' +
                 ", bat_description='" + bat_description + '\'' +
                 ", bat_id_img='" + bat_id_img + '\'' +
+                ", bat_liste_dep=" + bat_liste_dep +
                 ", visited=" + visited +
                 '}';
     }
