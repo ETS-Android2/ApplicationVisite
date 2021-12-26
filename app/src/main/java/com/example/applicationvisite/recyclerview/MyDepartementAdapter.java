@@ -13,18 +13,32 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.applicationvisite.DetailBatimentActivity;
 import com.example.applicationvisite.R;
+import com.example.applicationvisite.logique.BDRepository;
+import com.example.applicationvisite.logique.Batiment;
 import com.example.applicationvisite.logique.Departement;
 
 import java.util.ArrayList;
 
 public class MyDepartementAdapter extends RecyclerView.Adapter<MyDepartementAdapter.ViewHolder> {
 
-    ArrayList<Departement> myDepartementData;
+    ArrayList<Batiment> listeBatiments = BDRepository.getBatimentsListe();
+    ArrayList<Departement> myDepartementDataReel;
     Context context;
+    String idBat;
 
-    public MyDepartementAdapter(ArrayList<Departement> myDepartementData, DetailBatimentActivity activity) {
-        this.myDepartementData = myDepartementData;
+    public MyDepartementAdapter(ArrayList<Departement> myDepartementData, DetailBatimentActivity activity, String idBat) {
+        this.idBat=idBat;
+        this.myDepartementDataReel= new ArrayList<>();
         this.context = activity;
+        initializeList(myDepartementData);
+    }
+
+    private void initializeList(ArrayList<Departement>myDepartementData){
+        for(Departement dep:myDepartementData){
+            if (dep.getDep_mapLocation().contains(idBat)){
+                myDepartementDataReel.add(dep);
+            }
+        }
     }
 
     @NonNull
@@ -38,7 +52,7 @@ public class MyDepartementAdapter extends RecyclerView.Adapter<MyDepartementAdap
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final Departement myDepartementDataList = myDepartementData.get(position);
+        final Departement myDepartementDataList = myDepartementDataReel.get(position);
 
         holder.textViewName.setText(myDepartementDataList.getDep_nom());
 
@@ -56,7 +70,7 @@ public class MyDepartementAdapter extends RecyclerView.Adapter<MyDepartementAdap
 
     @Override
     public int getItemCount() {
-        return myDepartementData.size();
+        return myDepartementDataReel.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{

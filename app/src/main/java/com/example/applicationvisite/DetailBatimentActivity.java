@@ -6,9 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,8 +27,8 @@ public class DetailBatimentActivity extends AppCompatActivity {
 
     ImageButton buttonclose;
     String idQrCode ="";
+    String idBat="";
 
-    //TODO utiliser la liste de la BD
     ArrayList<Batiment> listeBatiments = BDRepository.getBatimentsListe();
 
     @Override
@@ -58,12 +61,13 @@ public class DetailBatimentActivity extends AppCompatActivity {
         for (Batiment bat : listeBatiments) {
             if (idQrCode.contains(bat.getBat_id())){
                 displayed =true;
+                idBat=idQrCode;
                 bat.setVisited(true);
                 TextView textView = findViewById(R.id.text_bat_name);
                 textView.setText(bat.getBat_nom());
 
-                TextView textView2 = findViewById(R.id.text_bat_description);
-                textView2.setText(bat.getBat_description());
+                TextView description = findViewById(R.id.text_bat_description);
+                description.setText(bat.getBat_description());
 
                 ImageView imageView = findViewById(R.id.imageView2);
                 Glide.with(this).load(bat.getBat_id_img()).into(imageView);
@@ -76,15 +80,32 @@ public class DetailBatimentActivity extends AppCompatActivity {
         }
 
         //recycler view avec les départements
-
-        RecyclerView recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         ArrayList<Departement> listeDepartement = BDRepository.getDepartementsListe();
+        boolean trouve=false;
+        for (Departement dept:listeDepartement) {
+            if (dept.getDep_mapLocation().contains(idBat)){
+                trouve=true;
+            }
+        }
 
-        MyDepartementAdapter myDepartementAdapter = new MyDepartementAdapter(listeDepartement, DetailBatimentActivity.this);
-        recyclerView.setAdapter(myDepartementAdapter);
+        FrameLayout fl = (FrameLayout) findViewById(R.id.flbatimentview);
+        FrameLayout fl2 = (FrameLayout) findViewById(R.id.flbatimentview2);
+
+
+        TextView titreDep = (TextView) findViewById(R.id.title_departements);
+        LinearLayout container = (LinearLayout) findViewById(R.id.container_departements);
+        if (trouve) {
+            RecyclerView recyclerView = findViewById(R.id.recyclerView);
+            recyclerView.setHasFixedSize(true);
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+            MyDepartementAdapter myDepartementAdapter = new MyDepartementAdapter(listeDepartement, DetailBatimentActivity.this, idBat);
+            recyclerView.setAdapter(myDepartementAdapter);
+        }
+        else {
+            fl.removeView(titreDep);
+            fl2.removeView(container);
+        }
 
     }
 
