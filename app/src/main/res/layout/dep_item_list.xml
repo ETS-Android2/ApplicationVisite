@@ -14,6 +14,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:background="@color/bleu_logo"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -22,7 +23,7 @@
                 android:layout_margin="10dp"
                 android:id="@+id/imageview"
                 android:layout_width="120dp"
-                android:layout_height="150dp"/>
+                android:layout_height="120dp"/>
 
             <LinearLayout
                 android:layout_weight="1"
@@ -35,7 +36,7 @@
                     android:id="@+id/recycler_dep_name"
                     android:textColor="#000"
                     android:textStyle="bold"
-                    android:textSize="25sp"
+                    android:textSize="18sp"
                     android:layout_margin="10dp"
                     android:text="Nom Département"
                     android:layout_width="match_parent"
@@ -46,7 +47,8 @@
                     android:layout_margin="10dp"
                     android:text="clickez ici pour plus d'informations"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"/>
 
             </LinearLayout>
 

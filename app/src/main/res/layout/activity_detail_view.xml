@@ -90,12 +90,28 @@
                 android:text="@string/item_bat_lienvideo"
                 android:textColor="@color/bleu_logo"
                 android:focusable="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_default"
+                android:text="Département(s)"
+                android:textColor="@color/noir_logo"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="250dp"
+            tools:context=".DetailBatimentActivity">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_margin="2dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+
+        </LinearLayout>
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainerView"

@@ -59,17 +59,14 @@ public class MyDepartementAdapter extends RecyclerView.Adapter<MyDepartementAdap
         return myDepartementData.size();
     }
 
-
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView movieImage;
         TextView textViewName;
-        TextView textViewDate;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             movieImage = itemView.findViewById(R.id.imageview);
             textViewName = itemView.findViewById(R.id.recycler_dep_name);
-
         }
     }
 
