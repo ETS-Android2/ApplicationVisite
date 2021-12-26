@@ -1,6 +1,9 @@
 package com.example.applicationvisite.recyclerview;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.applicationvisite.DetailBatimentActivity;
+import com.example.applicationvisite.DetailDepartementActivity;
 import com.example.applicationvisite.R;
 import com.example.applicationvisite.logique.BDRepository;
 import com.example.applicationvisite.logique.Batiment;
@@ -62,8 +66,18 @@ public class MyDepartementAdapter extends RecyclerView.Adapter<MyDepartementAdap
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String resScan = myDepartementDataList.getDep_id();
+
+                //encapsulation de l'id de la fenêtre demandée
+                Bundle bundle = new Bundle();
+                bundle.putString("id_decoded",resScan);
+
+                Intent detailviewactivity = new Intent(context.getApplicationContext(), DetailDepartementActivity.class);
+                //ajout de l'encapsulation
+                detailviewactivity.putExtras(bundle);
+                //lancement activité
+                context.startActivity(detailviewactivity);
                 //TODO : lancer la vue du département avec le bon  bind
-                Toast.makeText(context,"you clicked here", Toast.LENGTH_SHORT).show();
             }
         });
     }
