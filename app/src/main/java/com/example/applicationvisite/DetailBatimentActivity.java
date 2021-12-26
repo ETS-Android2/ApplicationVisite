@@ -1,6 +1,8 @@
 package com.example.applicationvisite;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +15,8 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.applicationvisite.logique.Batiment;
 import com.example.applicationvisite.logique.BDRepository;
+import com.example.applicationvisite.logique.Departement;
+import com.example.applicationvisite.recyclerview.MyDepartementAdapter;
 
 import java.util.ArrayList;
 
@@ -70,6 +74,18 @@ public class DetailBatimentActivity extends AppCompatActivity {
             startActivity(mainactivity);
             finish();
         }
+
+        //recycler view avec les départements
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        ArrayList<Departement> listeDepartement = BDRepository.getDepartementsListe();
+
+        MyDepartementAdapter myDepartementAdapter = new MyDepartementAdapter(listeDepartement, DetailBatimentActivity.this);
+        recyclerView.setAdapter(myDepartementAdapter);
+
     }
 
     @Override
