@@ -32,13 +32,14 @@
     <string name="title_horaires">Horaires</string>
     <string name="item_al_horaires">Ouvert de 11h à 13h30</string>
     <string name="item_al_utiles">crous.fr</string>
-    <string name="title_visiteguidee">Votre avancement sur la visite du campus</string>
-    <string name="bat_pourcentage">5%</string>
-    <string name="content_visiteguidee">Batiment sugéré pour la suite de votre visite</string>
+    <string name="title_visiteguidee">Batiments visités</string>
+    <string name="bat_pourcentage">batiments restants :</string>
+    <string name="content_visiteguidee">Batiment suivant le plus proche</string>
     <string name="bat_name">Batiment a</string>
     <string name="title_objetifs">Objectifs :</string>
     <string name="title_organisation">Organisation de la formation</string>
     <string name="title_lien_contact">Contact</string>
     <string name="title_candidature">Candidatures</string>
     <string name="item_dep_plaquette">Télécharger\nla plaquette complette</string>
+    <string name="bat_visite_restant">Aucun</string>
 </resources>

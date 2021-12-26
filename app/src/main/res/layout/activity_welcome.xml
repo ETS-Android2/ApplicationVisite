@@ -47,7 +47,7 @@
         android:layout_margin="@dimen/margin_default"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="Cette application va vous permettre de découvrir le campus de l'IUT de montpellier."
+        android:text="Cette application va vous permettre de découvrir le campus de l'IUT de Montpellier appartenant à l'UM."
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
 

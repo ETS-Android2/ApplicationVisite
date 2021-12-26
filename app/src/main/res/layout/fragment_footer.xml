@@ -14,7 +14,7 @@
         android:paddingBottom="@dimen/padding_default">
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/nb_bat_visited"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/padding_default"
@@ -23,30 +23,38 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/progressBarnull"
             tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/text_bat_pourcentage"
+            android:id="@+id/titlebatrestant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:paddingTop="15dp"
             android:text="@string/bat_pourcentage"
             android:textColor="@color/noir_logo"
-            android:textSize="15sp"
+            android:textSize="13sp"
+            android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+            app:layout_constraintTop_toBottomOf="@+id/nb_bat_visited"
+            tools:ignore="MissingConstraints" />
 
-        <ProgressBar
-            android:id="@+id/progressBar2"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/text_bat_restant"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/padding_default"
-            android:paddingRight="@dimen/padding_default"
-            app:layout_constraintTop_toBottomOf="@+id/text_bat_pourcentage" />
+            android:layout_gravity="center"
+            android:paddingTop="15dp"
+            android:text="@string/bat_visite_restant"
+            android:textColor="@color/noir_logo"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titlebatrestant" />
+
 
         <TextView
             android:id="@+id/textView8"
@@ -54,11 +62,12 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_default"
             android:text="@string/content_visiteguidee"
+            android:textAlignment="center"
             android:textColor="@color/noir_logo"
-            android:textSize="15sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progressBar2" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imageView5"
@@ -70,16 +79,26 @@
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/batSuivant_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/padding_default"
+            android:paddingLeft="@dimen/padding_default"
             android:text="@string/bat_name"
             android:textColor="@color/noir_logo"
-            android:textSize="15sp"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+        <ProgressBar
+            android:id="@+id/progressBarnull"
+            android:paddingTop="@dimen/padding_default"
+            android:paddingBottom="@dimen/padding_default"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/batSuivant_name" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
