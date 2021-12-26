@@ -20,14 +20,6 @@
         app:tint="@color/rouge_logo"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/namedetailview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:text="@string/namedetailview"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints" />
 
     <ScrollView
         android:id="@+id/scroll"

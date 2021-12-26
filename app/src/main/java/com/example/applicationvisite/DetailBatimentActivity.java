@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.applicationvisite.logique.Batiment;
 import com.example.applicationvisite.logique.BDRepository;
 
@@ -55,7 +57,12 @@ public class DetailBatimentActivity extends AppCompatActivity {
                 bat.setVisited(true);
                 TextView textView = findViewById(R.id.text_bat_name);
                 textView.setText(bat.getBat_nom());
-                //TODO faire la suite de l'affichage dynamique
+
+                TextView textView2 = findViewById(R.id.text_bat_description);
+                textView2.setText(bat.getBat_description());
+
+                ImageView imageView = findViewById(R.id.imageView2);
+                Glide.with(this).load(bat.getBat_id_img()).into(imageView);
             }
         }
         if (!displayed){

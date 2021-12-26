@@ -20,14 +20,6 @@
         app:tint="@color/rouge_logo"
         tools:ignore="MissingConstraints,ImageContrastCheck" />
 
-        <TextView
-            android:id="@+id/namedetailview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:text="@string/namedetailview"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="MissingConstraints" />
 
     <ScrollView
         android:id="@+id/scroll"
@@ -55,7 +47,6 @@
                 android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:src="@drawable/img_bat_a"
                 android:layout_margin="@dimen/margin_default"
                 />
 
@@ -66,6 +57,7 @@
                 android:text="@string/title_description"
                 android:textColor="@color/noir_logo"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 />
 
             <TextView
@@ -85,6 +77,7 @@
                 android:text="@string/title_lien_utiles"
                 android:textColor="@color/noir_logo"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 />
 
             <TextView

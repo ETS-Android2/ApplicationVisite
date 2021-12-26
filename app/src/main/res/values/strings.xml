@@ -11,34 +11,34 @@
     <string name="hello_second_fragment">JE SUIS LA SECONDE PAGE</string>
 
     <string name="welcome_message">Bienvenue à :</string>
-    <string name="descover">Découvrir le campus :</string>
+    <string name="descover">Découvrir le campus</string>
     <string name="namedetailview">Plus de détails</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="item_bat_name">Batiment A</string>
     <string name="item_bat_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
-    <string name="item_bat_lienvideo">https://youtube.com \nWikipedia.org</string>
+    <string name="item_bat_lienvideo">iut-montpellier-sete.edu.umontpellier.fr</string>
     <string name="info_scan_qrcode">Scannez un qr code pour découvrir plus d\'informations</string>
     <string name="title_activity_info">InfoActivity</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="tutoriel_text">Appuillez sur le bouton en bas de l\'écran pour scanner un Qr code se situant à proximité des centres d\'interet du site de l\'iut de montpellier.</string>
-    <string name="title_description">Description :</string>
-    <string name="title_lien_utiles">Liens Utiles :</string>
-    <string name="title_lieux_dinteret">Lieux d\'interêts :</string>
+    <string name="title_description">Description</string>
+    <string name="title_lien_utiles">Liens Utiles</string>
+    <string name="title_lieux_dinteret">Lieux d\'interêts</string>
     <string name="item_dep_name">Département Informatique</string>
     <string name="item_al_name">Cafétéria Du Batiment A</string>
-    <string name="title_video">Vidéo de présentation :</string>
-    <string name="title_horaires">Horaires :</string>
+    <string name="title_video">Vidéo de présentation</string>
+    <string name="title_horaires">Horaires</string>
     <string name="item_al_horaires">Ouvert de 11h à 13h30</string>
     <string name="item_al_utiles">crous.fr</string>
-    <string name="title_visiteguidee">Votre avancement sur la visite du campus :</string>
+    <string name="title_visiteguidee">Votre avancement sur la visite du campus</string>
     <string name="bat_pourcentage">5%</string>
-    <string name="content_visiteguidee">Batiment sugéré pour la suite de votre visite :</string>
+    <string name="content_visiteguidee">Batiment sugéré pour la suite de votre visite</string>
     <string name="bat_name">Batiment a</string>
     <string name="title_objetifs">Objectifs :</string>
-    <string name="title_organisation">Organisation de la formation :</string>
+    <string name="title_organisation">Organisation de la formation</string>
     <string name="title_lien_contact">Contact</string>
-    <string name="title_candidature">Candidatures :</string>
+    <string name="title_candidature">Candidatures</string>
     <string name="item_dep_plaquette">Télécharger\nla plaquette complette</string>
 </resources>
