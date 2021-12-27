@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
@@ -108,8 +107,45 @@ public class DetailBatimentActivity extends AppCompatActivity {
             fl2.removeView(container);
         }
 
+        //ETAIENT DANS LE FRAME
+
         Visite visiteInstance = Visite.getInstance();
         String idBatSuivant = visiteInstance.getBatimentSuivant(idQrCode);
+
+        String ressourceNom ="";
+        String ressourceLienImg= "";
+        for (Batiment b:listeBatiments) {
+            if (idBatSuivant.equals(b.getBat_id())){
+                ressourceNom = b.getBat_nom();
+                ressourceLienImg = b.getBat_id_img();
+            }
+        }
+
+        int cpt = 0;
+        for (Batiment b: listeBatiments) {
+            if (b.isVisited()){
+                cpt++;
+            }
+        }
+
+        TextView namebatsuivant = (TextView) findViewById(R.id.batSuivant_name);
+        namebatsuivant.setText(ressourceNom);
+
+        ImageView imagesuivant = findViewById(R.id.img_batiment_reco);
+        Glide.with(this).load(ressourceLienImg).into(imagesuivant);
+
+        TextView bat_visited = (TextView) findViewById(R.id.nb_bat_visited);
+        String ressource = "Batiments visités " + cpt + "/" + listeBatiments.size();
+        bat_visited.setText(ressource);
+
+        String tmp ="";
+        TextView batimentsRestants = (TextView) findViewById(R.id.text_bat_restant);
+        for (Batiment b: listeBatiments) {
+            if (!b.isVisited()){
+                tmp = tmp + b.getBat_nom() + "\n";
+            }
+        }
+        batimentsRestants.setText(tmp);
     }
 
     @Override
