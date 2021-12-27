@@ -19,6 +19,7 @@ import com.bumptech.glide.Glide;
 import com.example.applicationvisite.logique.Batiment;
 import com.example.applicationvisite.logique.BDRepository;
 import com.example.applicationvisite.logique.Departement;
+import com.example.applicationvisite.logique.Visite;
 import com.example.applicationvisite.recyclerview.MyDepartementAdapter;
 
 import java.util.ArrayList;
@@ -107,6 +108,8 @@ public class DetailBatimentActivity extends AppCompatActivity {
             fl2.removeView(container);
         }
 
+        Visite visiteInstance = Visite.getInstance();
+        String idBatSuivant = visiteInstance.getBatimentSuivant(idQrCode);
     }
 
     @Override

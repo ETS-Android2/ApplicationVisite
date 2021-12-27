@@ -1,5 +1,10 @@
 package com.example.applicationvisite.logique;
 
+import android.util.Log;
+
+import com.example.applicationvisite.SplashScreenActivity;
+
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 
@@ -20,10 +25,10 @@ public class Visite {
     public static Visite getInstance(){
         if (instance==null){
             int[] liaisonsPremierBat= {1,2,3,4,5,6,6,5,4,3,2,1,-1};
-            String[] tabBatimentCorrespondance = {"A","B","C","L","K","D","M","E","F","G","H","I","J"};
-            Visite v = new Visite(13,liaisonsPremierBat, tabBatimentCorrespondance);
-
-            instance = v;
+            String[] tabBatimentCorrespondance = {
+                    "bat_a","bat_b","bat_c","bat_l","bat_k","bat_d",
+                    "bat_m","bat_e","bat_f","bat_g","bat_h","bat_i","bat_j"};
+            instance = new Visite(13,liaisonsPremierBat, tabBatimentCorrespondance);
             return instance;
         }
         else {
@@ -44,8 +49,17 @@ public class Visite {
         return this.tabBatimentCorrespondance[index];
     }
 
-    public void setTabVisited(String nomBat) {
-        tabBatimentCorrespondance[getIndexWithBat(nomBat)]="";
+    private boolean isBatimentVisited(String id_bat){
+        System.out.println("test");
+        ArrayList<Batiment> listebat = BDRepository.getBatimentsListe();
+        listebat = SplashScreenActivity.getSharedBatList();
+
+        for ( Batiment bat: listebat){
+            if (bat.getBat_id().equals(id_bat)){
+                return bat.isVisited();
+            }
+        }
+        return true;
     }
 
     private void remplirGraph(int liaisonsPremierBat[]){
@@ -91,12 +105,13 @@ public class Visite {
                     deuxSolutionsTrouve.add(this.getBatWithIndex(i));
                 }
             }
+            System.out.println("test");
             //Vérification si visited ou non
             try {
-                if (!deuxSolutionsTrouve.get(0).isEmpty()) {
+                if (!this.isBatimentVisited(deuxSolutionsTrouve.get(0))) {
                     trouve = true;
                     retourne = deuxSolutionsTrouve.get(0);
-                } else if (!deuxSolutionsTrouve.get(1).isEmpty()) {
+                } else if (!this.isBatimentVisited(deuxSolutionsTrouve.get(1))) {
                     trouve = true;
                     retourne = deuxSolutionsTrouve.get(1);
                 }
@@ -117,6 +132,7 @@ public class Visite {
                 retourne = null;
             }
         }
+        Log.i("RECOMMANDATION", "prochain batiment à visiter :"+ retourne);
         return retourne;
     }
 
