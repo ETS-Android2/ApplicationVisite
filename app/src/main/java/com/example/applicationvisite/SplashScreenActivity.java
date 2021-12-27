@@ -13,6 +13,7 @@ import com.example.applicationvisite.logique.AutreLieu;
 import com.example.applicationvisite.logique.Batiment;
 import com.example.applicationvisite.logique.BDRepository;
 import com.example.applicationvisite.logique.Departement;
+import com.example.applicationvisite.logique.Visite;
 
 import java.util.ArrayList;
 
@@ -38,6 +39,10 @@ public class SplashScreenActivity extends AppCompatActivity {
             bdRepository.updateDataBat();
             bdRepository.updateDataDep();
             bdRepository.updateDataAL();
+
+        //Chargement données de la visite
+        Visite v = Visite.getInstance();
+        Log.i("VISITE Instance", v.toString());
 
 
         //code éxécuté après les 4 secondes
