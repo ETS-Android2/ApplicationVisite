@@ -8,7 +8,6 @@ import java.util.LinkedList;
 @IgnoreExtraProperties
 public class Batiment implements Lieux{
 
-    //LinkedList<Lieux> listeLieuxInteret;
 
     String bat_nom;
     String bat_id;
@@ -18,7 +17,6 @@ public class Batiment implements Lieux{
     boolean visited;
 
     public Batiment(String bat_nom, String bat_id, String bat_description, String bat_id_img, boolean visited,String bat_liste_dep) {
-        //this.listeLieuxInteret = new LinkedList<>();
         this.bat_nom = bat_nom;
         this.bat_id = bat_id;
         this.bat_description = bat_description;

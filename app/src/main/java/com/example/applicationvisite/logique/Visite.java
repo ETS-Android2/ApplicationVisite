@@ -118,7 +118,7 @@ public class Visite {
                 else {
                     deuxSolutionsTrouve.clear();
                 }
-            }catch (NullPointerException e){
+            }catch (Exception e){
                 //S'il n'existe qu'une solution : que la première
                 trouve = true;
                 retourne = deuxSolutionsTrouve.get(0);

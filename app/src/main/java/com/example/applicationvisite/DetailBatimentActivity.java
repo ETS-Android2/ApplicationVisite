@@ -112,14 +112,25 @@ public class DetailBatimentActivity extends AppCompatActivity {
         Visite visiteInstance = Visite.getInstance();
         String idBatSuivant = visiteInstance.getBatimentSuivant(idQrCode);
 
-        String ressourceNom ="";
-        String ressourceLienImg= "";
-        for (Batiment b:listeBatiments) {
-            if (idBatSuivant.equals(b.getBat_id())){
-                ressourceNom = b.getBat_nom();
-                ressourceLienImg = b.getBat_id_img();
+        if (idBatSuivant!=null) {
+            String ressourceNom = "";
+            String ressourceLienImg = "";
+            for (Batiment b : listeBatiments) {
+                if (idBatSuivant.equals(b.getBat_id())) {
+                    ressourceNom = b.getBat_nom();
+                    ressourceLienImg = b.getBat_id_img();
+                }
             }
+
+            TextView namebatsuivant = (TextView) findViewById(R.id.batSuivant_name);
+            namebatsuivant.setText(ressourceNom);
+
+            ImageView imagesuivant = findViewById(R.id.img_batiment_reco);
+            Glide.with(this).load(ressourceLienImg).into(imagesuivant);
         }
+
+
+
 
         int cpt = 0;
         for (Batiment b: listeBatiments) {
@@ -127,12 +138,6 @@ public class DetailBatimentActivity extends AppCompatActivity {
                 cpt++;
             }
         }
-
-        TextView namebatsuivant = (TextView) findViewById(R.id.batSuivant_name);
-        namebatsuivant.setText(ressourceNom);
-
-        ImageView imagesuivant = findViewById(R.id.img_batiment_reco);
-        Glide.with(this).load(ressourceLienImg).into(imagesuivant);
 
         TextView bat_visited = (TextView) findViewById(R.id.nb_bat_visited);
         String ressource = "Batiments visités " + cpt + "/" + listeBatiments.size();
