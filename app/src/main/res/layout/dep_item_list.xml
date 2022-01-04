@@ -14,6 +14,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/container_departements"
             android:background="@color/bleu_logo"
             android:orientation="horizontal"
             android:layout_width="match_parent"

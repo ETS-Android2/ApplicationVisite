@@ -2,12 +2,14 @@ package com.example.applicationvisite.recyclerview;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -59,6 +61,7 @@ public class MyDepartementAdapter extends RecyclerView.Adapter<MyDepartementAdap
         final Departement myDepartementDataList = myDepartementDataReel.get(position);
 
         holder.textViewName.setText(myDepartementDataList.getDep_nom());
+        holder.container_departements.setBackgroundColor(Color.parseColor(myDepartementDataList.getDep_color_string()));
 
         //TODO : mettre une image dynamique
         //holder.movieImage.setImageResource(myDepartementData.getMovieImage());
@@ -77,7 +80,6 @@ public class MyDepartementAdapter extends RecyclerView.Adapter<MyDepartementAdap
                 detailviewactivity.putExtras(bundle);
                 //lancement activité
                 context.startActivity(detailviewactivity);
-                //TODO : lancer la vue du département avec le bon  bind
             }
         });
     }
@@ -90,11 +92,13 @@ public class MyDepartementAdapter extends RecyclerView.Adapter<MyDepartementAdap
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView movieImage;
         TextView textViewName;
+        LinearLayout container_departements;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             movieImage = itemView.findViewById(R.id.imageview);
             textViewName = itemView.findViewById(R.id.recycler_dep_name);
+            container_departements =itemView.findViewById(R.id.container_departements);
         }
     }
 
