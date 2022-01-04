@@ -37,11 +37,14 @@
                 android:id="@+id/text_dep_name"
                 android:textSize="20sp"
                 android:layout_gravity="center"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/padding_default"
                 android:textColor="@color/noir_logo"
-                android:text="@string/item_dep_name" />
+                android:text="@string/item_dep_name"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                />
 
             <ImageView
                 android:id="@+id/dep_image"
@@ -55,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/padding_default"
                 android:text="@string/title_objetifs"
-                android:textColor="@color/noir_logo"
+                android:textColor="@color/jaune"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 />
@@ -71,11 +74,11 @@
                 />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/padding_default"
                 android:text="@string/title_organisation"
-                android:textColor="@color/noir_logo"
+                android:textColor="@color/jaune"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 />
@@ -91,11 +94,11 @@
                 />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/padding_default"
                 android:text="@string/title_candidature"
-                android:textColor="@color/noir_logo"
+                android:textColor="@color/jaune"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 />
@@ -112,11 +115,11 @@
 
             <TextView
                 android:textStyle="bold"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/padding_default"
                 android:text="@string/title_video"
-                android:textColor="@color/noir_logo"
+                android:textColor="@color/jaune"
                 android:textSize="18sp"
                 />
 
@@ -135,11 +138,11 @@
 
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/padding_default"
                 android:text="@string/title_lien_contact"
-                android:textColor="@color/noir_logo"
+                android:textColor="@color/jaune"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 />

@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -67,6 +68,7 @@ public class DetailDepartementActivity extends YouTubeBaseActivity{
                 curent_dep = dep;
                 TextView textView = findViewById(R.id.text_dep_name);
                 textView.setText(dep.getDep_nom());
+                textView.setBackgroundColor(Color.parseColor(dep.getDep_color_string()));
 
                 TextView textView1 = findViewById(R.id.text_bat_objectifs);
                 textView1.setText(dep.getDep_objectifs());
@@ -92,6 +94,7 @@ public class DetailDepartementActivity extends YouTubeBaseActivity{
 
         //Partie download de la plaquette
         download_plaquette = findViewById(R.id.bouton_dl_plaquette);
+        download_plaquette.setBackgroundColor(Color.parseColor(curent_dep.getDep_color_string()));
         download_plaquette.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -101,7 +104,7 @@ public class DetailDepartementActivity extends YouTubeBaseActivity{
 
         //Partie intégration youtube
         playButton = (Button) findViewById(R.id.play_button_youtube);
-        //playButton.setBackgroundColor(curent_dep.getDep_couleur());
+        playButton.setBackgroundColor(Color.parseColor(curent_dep.getDep_color_string()));
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

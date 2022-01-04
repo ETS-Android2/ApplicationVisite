@@ -13,8 +13,10 @@ public class Departement implements Lieux{
     String dep_contact;
     String dep_lienimg;
     String dep_nomplaquette;
+    String dep_color_string;
 
-    public Departement(String dep_nom, String dep_id, String dep_lienvideo, String dep_mapLocation, String dep_objectifs, String dep_candidature, String dep_organisation, String dep_alternance, String dep_contact, String dep_lienimg, String dep_nomplaquette) {
+
+    public Departement(String dep_nom, String dep_id, String dep_lienvideo, String dep_mapLocation, String dep_objectifs, String dep_candidature, String dep_organisation, String dep_alternance, String dep_contact, String dep_lienimg, String dep_nomplaquette, String dep_color_string) {
         this.dep_nom = dep_nom;
         this.dep_id = dep_id;
         this.dep_lienvideo = dep_lienvideo;
@@ -26,9 +28,14 @@ public class Departement implements Lieux{
         this.dep_contact = dep_contact;
         this.dep_lienimg = dep_lienimg;
         this.dep_nomplaquette = dep_nomplaquette;
+        this.dep_color_string = dep_color_string;
     }
 
     public Departement() {
+    }
+
+    public String getDep_color_string() {
+        return dep_color_string;
     }
 
     public String getDep_nomplaquette() {

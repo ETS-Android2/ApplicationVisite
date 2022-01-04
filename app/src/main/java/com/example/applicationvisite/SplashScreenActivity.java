@@ -62,7 +62,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
                 sharedDepList = new ArrayList<>();
                 for (Departement dep: bdRepository.getDepartementsListe()) {
-                    Departement copy = new Departement(dep.getDep_nom(),dep.getDep_id(), dep.getDep_lienvideo(),dep.getDep_mapLocation(), dep.getDep_objectifs(),dep.getDep_candidature(), dep.getDep_organisation(), dep.getDep_alternance(), dep.getDep_contact(), dep.getDep_lienimg(), dep.getDep_nomplaquette());
+                    Departement copy = new Departement(dep.getDep_nom(),dep.getDep_id(), dep.getDep_lienvideo(),dep.getDep_mapLocation(), dep.getDep_objectifs(),dep.getDep_candidature(), dep.getDep_organisation(), dep.getDep_alternance(), dep.getDep_contact(), dep.getDep_lienimg(), dep.getDep_nomplaquette(), dep.getDep_color_string());
                     sharedDepList.add(copy);
                 }
                 Log.d(TAG, "___________Nouvelle liste partagée départements_________" + sharedDepList);
