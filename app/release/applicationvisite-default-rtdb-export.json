@@ -1,0 +1,226 @@
+{
+  "autreslieux" : {
+    "al_bibliotheque_u" : {
+      "al_description" : "la bibliothèque universitaire du campus est un lieu calme proposant différentes sources d'informations misent à disposition des étudiants",
+      "al_horaires" : " 8h15 / 17h45",
+      "al_id" : "al_bibliothèque_u",
+      "al_lienvideo" : "https://youtube.com",
+      "al_mapLocation" : "bat_a",
+      "al_nom" : "Bibliothèque universitaire"
+    },
+    "al_cafetaria_nord" : {
+      "al_description" : "la cafétaria nord propose des plats de haute qualité",
+      "al_horaires" : "11h / 14h",
+      "al_id" : "al_cafetaria_nord",
+      "al_lienvideo" : "https://youube.com",
+      "al_mapLocation" : "",
+      "al_nom" : "Cafétaria nord"
+    },
+    "al_cafetaria_sud" : {
+      "al_description" : "la cafetaria du batiment à vous propose un service de qualité avec des personnes agréables.",
+      "al_horaires" : "11h / 13h30",
+      "al_id" : "al_cafetaria_sud",
+      "al_lienvideo" : "https://youtube.com",
+      "al_mapLocation" : "bat_a",
+      "al_nom" : "Cafetria du batiment A"
+    }
+  },
+  "batiments" : {
+    "bat_a" : {
+      "bat_description" : "Le bâtiment A est le bâtiment central du campus. Il regroupe toute la partie administrative de l'IUT de Montpellier-Sète, les amphis 1 et 2, une cafétéria et la Bibliothèque Universitaire. On peut également y trouver les salles de TD destinées à l'enseignement des langues.",
+      "bat_id" : "bat_a",
+      "bat_id_img" : "https://i.imgur.com/wkgKGQP.jpeg",
+      "bat_liste_dep" : "",
+      "bat_nom" : "Bâtiment A",
+      "bat_visited" : false
+    },
+    "bat_b" : {
+      "bat_description" : "Le bâtiment B est le premier des 3 bâtiments proposant les enseignements de Mesures Physiques. Il regroupe ainsi une partie des salles de TDs et TPs de cette filière.",
+      "bat_id" : "bat_b",
+      "bat_id_img" : "https://i.imgur.com/P3sjD6O.jpg",
+      "bat_liste_dep" : "mp",
+      "bat_nom" : "Bâtiment B",
+      "bat_visited" : false
+    },
+    "bat_c" : {
+      "bat_description" : "Le bâtiment C est le second des 3 bâtiments proposant les enseignements de Mesures Physiques. Il regroupe ainsi une partie des salles de TDs et TPs de cette filière.",
+      "bat_id" : "bat_c",
+      "bat_id_img" : "https://i.imgur.com/ko4z6sW.jpg",
+      "bat_liste_dep" : "",
+      "bat_nom" : "Bâtiment C",
+      "bat_visited" : true
+    },
+    "bat_d" : {
+      "bat_description" : "Le bâtiment D est le troisième des 3 bâtiments proposant les enseignements de Mesures Physiques. On y retrouve également Ob.i LAB, proposant toutes sortes de services, disponibles plus en détails en scannant le QR Code associé.",
+      "bat_id" : "bat_d",
+      "bat_id_img" : "https://i.imgur.com/L6ilasq.jpg",
+      "bat_nom" : "Bâtiment d",
+      "bat_visited" : true
+    },
+    "bat_e" : {
+      "bat_description" : "Le bâtiment E est le bâtiment réservé au département Génie Biologique. Il regroupe les salles de TDs et TPs de cette filière.",
+      "bat_id" : "bat_e",
+      "bat_id_img" : "https://i.imgur.com/zquvkuD.jpg",
+      "bat_liste_dep" : "",
+      "bat_nom" : "Bâtiment E",
+      "bat_visited" : true
+    },
+    "bat_f" : {
+      "bat_description" : "Le bâtiment F est le premier bâtiment réservé au département Chimie. Il regroupe ainsi une partie des salles de TDs et TPs de cette filière.",
+      "bat_id" : "bat_f",
+      "bat_id_img" : "https://i.imgur.com/J1K0QSv.jpg",
+      "bat_liste_dep" : "",
+      "bat_nom" : "Bâtiment F",
+      "bat_visited" : true
+    },
+    "bat_g" : {
+      "bat_description" : "Le bâtiment G est la Halle de Génie Chimique, rattaché à la filière Chimie. Il propose une grande diversité d'ateliers et de matériels de chimie.",
+      "bat_id" : "bat_g",
+      "bat_id_img" : "https://i.imgur.com/uEUpOJs.jpg",
+      "bat_nom" : "Bâtiment G",
+      "bat_visited" : true
+    },
+    "bat_h" : {
+      "bat_description" : "Le bâtiment H est le troisième bâtiment proposant les enseignements de Chimie. Il contient le reste des salles de TDs et TPs de la filière.",
+      "bat_id" : "bat_h",
+      "bat_id_img" : "https://i.imgur.com/ZA8SAYl.jpg",
+      "bat_nom" : "Bâtiment H",
+      "bat_visited" : true
+    },
+    "bat_i" : {
+      "bat_description" : "Le bâtiment I est le premier des 2 bâtiments proposant les enseignements de Génie électrique et informatique industrielle. Il regroupe ainsi une partie des salles de TDs et TPs de cette filière, mais également l'amphi 5.",
+      "bat_id" : "bat_i",
+      "bat_id_img" : "https://i.imgur.com/OOIQyQq.jpg",
+      "bat_nom" : "Bâtiment I",
+      "bat_visited" : true
+    },
+    "bat_j" : {
+      "bat_description" : "Le bâtiment J est le second bâtiment proposant les enseignements de Génie électrique et informatique industrielle. Il contient le reste des salles de TDs et TPs de la filière.",
+      "bat_id" : "bat_j",
+      "bat_id_img" : "https://i.imgur.com/VCqCoY7.jpg",
+      "bat_nom" : "Bâtiment J",
+      "bat_visited" : true
+    },
+    "bat_k" : {
+      "bat_description" : "Le bâtiment K est un bâtiment regroupant sur 3 étages 3 différents départements que sont le département Informatique, le département Gestion des Entreprises et des Administrations (GEA), et le département Techniques de commercialisation (TC). Il regroupe par la même occasion les services administratifs de ces différentes filières, mais également toutes les salles de TDs et TPs qui leurs sont associées.",
+      "bat_id" : "bat_k",
+      "bat_id_img" : "https://i.imgur.com/AcUfudy.jpg",
+      "bat_nom" : "Bâtiment K",
+      "bat_visited" : true
+    },
+    "bat_l" : {
+      "bat_description" : "Le bâtiment L contient les amphis 3 et 4.",
+      "bat_id" : "bat_l",
+      "bat_id_img" : "https://i.imgur.com/MNTfTfd.jpg",
+      "bat_nom" : "Bâtiment L",
+      "bat_visited" : true
+    },
+    "bat_m" : {
+      "bat_description" : "Le bâtiment M est l'atelier de technologie alimentaire, rattaché au parcours Diététique et Nutrition de la filière Génie Biologique.",
+      "bat_id" : "bat_m",
+      "bat_id_img" : "https://i.imgur.com/mz1fLnN.jpg",
+      "bat_nom" : "Bâtiment M",
+      "bat_visited" : true
+    }
+  },
+  "departements" : {
+    "dep_chm" : {
+      "dep_alternance" : "Alternance possible à partir de la deuxième année du BUT avec un contrat de deux ans ou à la troisième année avec un contrat d'un an.",
+      "dep_candidature" : "Profil :\nBAC général obtenu à partir de 2021 avec au moins une des spécialités suivantes : Mathématiques, Physique-chimie, SVT, Sciences de l’Ingénieur.\nBAC général obtenu avant 2021 : BAC S (autres, selon le dossier).\nBac technologique : STL",
+      "dep_color_string" : "#87ba44",
+      "dep_contact" : "Secrétariat du département Chimie : \nTél. : 04 99 58 51 18 \nCourriel : iutms-chimie-m@umontpellier.fr \nPôle Relations Entreprises & Alternance \nTél. : 04 99 58 52 37 \nCourriel : iutms-prea@umontpellier.fr",
+      "dep_id" : "dep_chm",
+      "dep_lienimg" : "https://i.imgur.com/hwilWH5.png",
+      "dep_lienvideo" : "MQUeXGjl_Ys",
+      "dep_mapLocation" : "bat_f bat_g bat_h",
+      "dep_nom" : "Département Chimie Montpellier.",
+      "dep_nomplaquette" : "CHM_BUT_RV_2022",
+      "dep_objectifs" : "Former des techniciens supérieurs, collaborateurs directs de l’ingénieur ou du chercheur dans tous les domaines d’application de la chimie : recherche, développement, production, analyse ou contrôle.",
+      "dep_organisation" : "Date de début : septembre \nDurée : 3 ans \nVolume horaire : 2000h \n Stage : 22 à 26 semaines au cours des 3 années \nProjet tutoré : 600h \nContrôle des connaissances : contrôle continu"
+    },
+    "dep_gb" : {
+      "dep_alternance" : "Alternance possible dès la 3e année du BUT.",
+      "dep_candidature" : "Profil :\nBAC général obtenu à partir de 2021 avec au moins deux des spécialités suivantes : Mathématiques, Physique/chimie, SVT.\nBAC général obtenu avant 2021 : BAC S.\nBac technologique : STL",
+      "dep_color_string" : "#00a7b8",
+      "dep_contact" : "Secrétariat du département Génie Biologique : \nTél. : 04 99 58 50 80 \nCourriel : iutms-gb@umontpellier.fr \nPôle Relations Entreprises & Alternance: \nTél. : 04 99 58 52 37\n Courriel : iutms-prea@umontpellier.fr",
+      "dep_id" : "dep_gb",
+      "dep_lienimg" : "https://i.imgur.com/QI7Wq1w.png",
+      "dep_lienvideo" : "R55XCry1c0A",
+      "dep_mapLocation" : "bat_e bat_m",
+      "dep_nom" : "Département Génie Biologique.",
+      "dep_nomplaquette" : "GB_BMB_BUT_RV_2022",
+      "dep_objectifs" : "Donner des compétences théoriques et techniques permettant une utilisation des outils biologiques les plus modernes dans le cadre du diagnostic de pathologies animales et humaines (laboratoires et plateformes d’analyse médicale et vétérinaire) ainsi que des compétences nécessaires à la mise au point, au développement et l’évaluation de ces outils de diagnostic et des traitements des pathologies diagnostiquées.",
+      "dep_organisation" : "Date de début : septembre\nDurée : 3 ans\nVolume horaire : 2000h\nStage : 24 à 26 semaines au cours des 3 années\nProjet tutoré : 600h\nContrôle des connaissances : contrôle continu"
+    },
+    "dep_gea" : {
+      "dep_alternance" : "Possible à partir de la 2ème année ou de la troisième année en GPRH et GC2F.\nPossible en troisième année de GEMA (site de Sète uniquement, à confirmer).",
+      "dep_candidature" : "PROFIL :\n- BAC général obtenu à partir de 2021 avec de préférence les combinaisons de spécialités suivantes : Mathématiques et SES ou Histoire-géographie, géopolitique et sciences politiques, Mathématiques et NSI ou LLCE. \n- BAC général obtenu avant 2021 : BAC ES & S (autres, selon le dossier). \nBac technologique : STMG (Option Gestion et Finance en priorité).",
+      "dep_color_string" : "#f0702f",
+      "dep_contact" : "Secrétariat du département GEA \nTél. : 04 99 58 51 60 \nCourriel : iutms-gea@umontpellier.fr \nPôle Relations Entreprises & Alternance \nTél. : 04 99 58 52 37 \nCourriel : iutms-prea@umontpellier.fr",
+      "dep_id" : "dep_gea",
+      "dep_lienimg" : "https://i.imgur.com/0o3XJCA.jpeg",
+      "dep_lienvideo" : "Z864MIYKbgg",
+      "dep_mapLocation" : "bat_k",
+      "dep_nom" : "Département GEA",
+      "dep_nomplaquette" : "GEA_BUT_RV_2022",
+      "dep_objectifs" : "Appréhender l’environnement économique et juridique de l’organisation, la gestion de l’entreprise du point de vue financier et du point de vue des ressources humaines. Maîtriser les techniques comptables et fiscales et analyser les performances financières de l’entreprise.",
+      "dep_organisation" : "Date de début : septembre \nDurée : 3 ans \nVolume horaire : 1800h \nStage : 22 à 26 semaines au cours des 3 années \nProjet tutoré : 600h \nContrôle des connaissances : contrôle continu"
+    },
+    "dep_geii" : {
+      "dep_alternance" : "Alternance possible pour les 3 parcours : • dès la 2ème année (contrat de 2 ans), • la 3ème année (contrat de 1 an).",
+      "dep_candidature" : "PROFIL :\n- BAC général obtenu à partir de 2021\nSpécialités très adaptées : Mathématiques, Physique-chimie, Sciences de l’Ingénieur.\nSpécialités adaptées : NSI, SVT, SES, LLCE. \n- BAC général obtenu avant 2021 : BAC S (autres, selon le dossier). \nBac technologique : STI2D.",
+      "dep_color_string" : "#8a005d",
+      "dep_contact" : "Secrétariat du département GEII \nTél. : 04 99 58 51 20 \nCourriel : iutms-geii@umontpellier.fr \nPôle Relations Entreprises & Alternance \nTél. : 04 99 58 52 37 \nCourriel : iutms-prea@umontpellier.fr",
+      "dep_id" : "dep_geii",
+      "dep_lienimg" : "https://i.imgur.com/mMOVlmI.jpeg",
+      "dep_lienvideo" : "5j5ZEaCry6M",
+      "dep_mapLocation" : "bat_i bat_j",
+      "dep_nom" : "Département GEII",
+      "dep_nomplaquette" : "GEII_BUT_RV_2022",
+      "dep_objectifs" : "Diplôme polyvalent, le B.U.T GEII a pour mission de former des cadres intermédiaires capables de mettre en place et gérer des installations électriques, de concevoir, réaliser, programmer et maintenir des cartes électroniques fixes ou embarquées (automobile, avionique, robotique, etc.), d’automatiser et de contrôler des processus industriels. Les diplômés sauront aussi gérer et maintenir des réseaux informatiques industriels, analyser et développer des systèmes de traitement et de transmission de l’information.",
+      "dep_organisation" : "Date de début : septembre \nDurée : 3 ans \nVolume horaire : 2000h \nStage : 22 à 26 semaines au cours des 3 années \nProjet tutoré : 600h \nContrôle des connaissances : contrôle continu"
+    },
+    "dep_info" : {
+      "dep_alternance" : "Possible dès la 2ème année du B.U.T. • Au semestre 3 : avec un contrat de 2 ans. • Au semestre 4 : avec un contrat de 1an et demi. • Au semestre 5 : avec un contrat de 1 an.",
+      "dep_candidature" : "PROFIL :\n- BAC général obtenu à partir de 2021 avec au moins une des spécialités suivantes : Mathématiques, Numérique & Sciences Informatique, Physique-chimie, SVT, Sciences de l’Ingénieur. \n- BAC général obtenu avant 2021 : \nBAC S (autres, selon le dossier). \nBac technologique : STI2D.",
+      "dep_color_string" : "#bb1e27",
+      "dep_contact" : "Secrétariat du département Informatique \nTél. : 04 99 58 51 80 \nCourriel : iutms-info@umontpellier.fr \nPôle Relations Entreprises & Alternance \nTél. : 04 99 58 52 37 \nCourriel : iutms-prea@umontpellier.fr",
+      "dep_id" : "dep_info",
+      "dep_lienimg" : "https://i.imgur.com/7aWJAsq.jpeg",
+      "dep_lienvideo" : "IX1m_UsOHmw",
+      "dep_mapLocation" : "bat_k",
+      "dep_nom" : "Département Informatique",
+      "dep_nomplaquette" : "INFO_BUT_RV_2022",
+      "dep_objectifs" : "Former des professionnels qui participent à la conception, la réalisation et la mise en oeuvre de solutions informatiques correspondant aux besoins des utilisateurs.",
+      "dep_organisation" : "Date de début : septembre \nDurée : 3 ans \nVolume horaire : 2000h \nStage : 22 à 26 semaines au cours des 3 années \nProjet tutoré : 600h \nContrôle des connaissances : contrôle continu"
+    },
+    "dep_mp" : {
+      "dep_alternance" : "Alternance possible à partir de la deuxième année du BUT avec un contrat de deux ans ou à la troisième année avec un contrat d'un an.",
+      "dep_candidature" : "Profil :\n BAC général obtenu à partir de 2021. Spécialités très adaptées : Mathématiques, Physique-chimie, SI. Spécialités adaptées : NSI, SVT.\n BAC général obtenu avant 2021 : BAC S (autres, selon le dossier).\n Bac technologique : STL et STI2D",
+      "dep_color_string" : "#6f448d",
+      "dep_contact" : "Secrétariat du département Mesures Physiques \nTél. : 04 99 58 50 60 \nCourriel : iutms-mp@umontpellier.fr \nPôle Relations Entreprises & Alternance \nTél. : 04 99 58 52 37 \nCourriel : iutms-prea@umontpellier.fr",
+      "dep_id" : "dep_mp",
+      "dep_lienimg" : "https://i.imgur.com/WnonRV1.png",
+      "dep_lienvideo" : "S9kfUxH2WTM",
+      "dep_mapLocation" : "bat_b bat_c bat_d",
+      "dep_nom" : "Département Mesures Physiques.",
+      "dep_nomplaquette" : "MP_BUT_RV_2022",
+      "dep_objectifs" : "Former des cadres techniques capables de réaliser et d’analyser les nombreuses mesures imposées par la technique moderne dans les unités de production automatisées, les laboratoires, les centres d’essais, de mise au point et de contrôle.",
+      "dep_organisation" : "Date de début : septembre \nDurée : 3 ans \nVolume horaire : 2000h \n Stage :26 semaines (11 en B.U.T 2 et 15 en B.U.T 3) \nProjet tutoré : 600h \nContrôle des connaissances : contrôle continu"
+    },
+    "dep_tc" : {
+      "dep_alternance" : "Dès la 1ère année pour le parcours « Business développement et management de la relation client » avec un contrat de 3 ans. Rythme hebdomadaire B.U.T 1 et B.U.T 2 : 2 jours IUT / 3 jours entreprise (inversement la semaine suivante).\nPossible en 3ème année pour les 2 autres parcours avec un contrat d’un an.",
+      "dep_candidature" : "PROFIL :\n- BAC général obtenu à partir de 2021 avec de préférence les combinaisons de spécialités suivantes : Mathématiques ; Sciences économiques et sociales ; Langues, littératures et cultures étrangères ; Histoire-géographie, géopolitique et sciences politiques ; Numérique & Sciences Informatiques. \n- BAC général obtenu avant 2021 : BAC ES & S (autres, selon le dossier). \nBac technologique : STMG (mercatique, gestion & finance et RH).",
+      "dep_color_string" : "#e94663",
+      "dep_contact" : "Secrétariat du département TC \nTél. : 04 99 58 51 40/39 \nCourriel : iutms-techdeco@umontpellier.fr \nPôle Relations Entreprises & Alternance \nTél. : 04 99 58 52 37 \nCourriel : iutms-prea@umontpellier.fr",
+      "dep_id" : "dep_tc",
+      "dep_lienimg" : "https://i.imgur.com/Sac2lIN.jpeg",
+      "dep_lienvideo" : "ZSJ1HnngFUc",
+      "dep_mapLocation" : "bat_k",
+      "dep_nom" : "Département TC",
+      "dep_nomplaquette" : "TC_BUT_RV_2022",
+      "dep_objectifs" : "Former des étudiants en vue d’occuper des postes de commerciaux polyvalents et autonomes, en leur donnant des compétences très larges, nécessaires à une poursuite d’études ou à une évolution future de leur carrière.",
+      "dep_organisation" : "Date de début : septembre \nDurée : 3 ans \nVolume horaire : 1800h \nStage : 22 à 26 semaines au cours des 3 années \nProjet tutoré : 600h \nContrôle des connaissances : contrôle continu"
+    }
+  }
+}

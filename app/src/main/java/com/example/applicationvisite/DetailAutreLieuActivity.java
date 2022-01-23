@@ -19,6 +19,7 @@ public class DetailAutreLieuActivity extends AppCompatActivity {
     ImageButton buttonclose;
     String idQrCode ="";
 
+    //Pas terminée
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -123,7 +123,7 @@ public class DetailDepartementActivity extends YouTubeBaseActivity{
             @Override
             public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
                 //Echec de chargement
-                Log.d(TAG, "onInitializationSuccess: failed to read -> " + curent_dep.getDep_lienvideo());
+                Log.d(TAG, "onInitializationFailure: failed to read -> " + curent_dep.getDep_lienvideo());
             }
         };
 

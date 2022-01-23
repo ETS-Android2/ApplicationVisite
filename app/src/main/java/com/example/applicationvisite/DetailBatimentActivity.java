@@ -29,14 +29,13 @@ public class DetailBatimentActivity extends AppCompatActivity {
     String idQrCode ="";
     String idBat="";
 
-    //ArrayList<Batiment> listeBatiments = BDRepository.getBatimentsListe();
     ArrayList<Batiment> listeBatiments;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_view);
-        //bouton
+        //bouton fermer
         buttonclose = (ImageButton) findViewById(R.id.button_close2);
         buttonclose.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,8 +107,7 @@ public class DetailBatimentActivity extends AppCompatActivity {
             fl2.removeView(container);
         }
 
-        //ETAIENT DANS LE FRAME
-
+        //Gestion de la visite
         Visite visiteInstance = Visite.getInstance();
         String idBatSuivant = visiteInstance.getBatimentSuivant(idQrCode);
 
@@ -129,9 +127,6 @@ public class DetailBatimentActivity extends AppCompatActivity {
             ImageView imagesuivant = findViewById(R.id.img_batiment_reco);
             Glide.with(this).load(ressourceLienImg).into(imagesuivant);
         }
-
-
-
 
         int cpt = 0;
         for (Batiment b: listeBatiments) {
