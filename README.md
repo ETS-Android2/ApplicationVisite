@@ -1,6 +1,6 @@
 # Application VisiteGuidée du Campus de l'IUT Montpellier-Sète
 
-## <span style="color:#ccccff"><b><u> I. Comment démarer l'application ? </b></u>
+## <span style="color:#ccccff"><b><u> I. Comment démarrer l'application ? </b></u>
 
 -> Téléverser le fichier d'instalation .apk sur votre appareil androïd (ce fichier se trouve dans ./app/release/app-release.apk) <br />
 -> Installer l'application <br />
