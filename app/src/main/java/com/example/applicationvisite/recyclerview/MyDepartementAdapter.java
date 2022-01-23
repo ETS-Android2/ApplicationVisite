@@ -4,18 +4,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.applicationvisite.DetailBatimentActivity;
 import com.example.applicationvisite.DetailDepartementActivity;
 import com.example.applicationvisite.R;
@@ -63,6 +62,8 @@ public class MyDepartementAdapter extends RecyclerView.Adapter<MyDepartementAdap
         holder.textViewName.setText(myDepartementDataList.getDep_nom());
         holder.container_departements.setBackgroundColor(Color.parseColor(myDepartementDataList.getDep_color_string()));
 
+        Glide.with(context).load(myDepartementDataList.getDep_lienimg()).into(holder.imgpres);
+
         //TODO : mettre une image dynamique
         //holder.movieImage.setImageResource(myDepartementData.getMovieImage());
 
@@ -90,13 +91,13 @@ public class MyDepartementAdapter extends RecyclerView.Adapter<MyDepartementAdap
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        ImageView movieImage;
+        ImageView imgpres;
         TextView textViewName;
         LinearLayout container_departements;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            movieImage = itemView.findViewById(R.id.imageview);
+            imgpres = itemView.findViewById(R.id.imageview);
             textViewName = itemView.findViewById(R.id.recycler_dep_name);
             container_departements =itemView.findViewById(R.id.container_departements);
         }

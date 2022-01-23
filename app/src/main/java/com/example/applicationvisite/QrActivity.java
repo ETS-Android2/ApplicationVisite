@@ -18,11 +18,13 @@ public class QrActivity extends AppCompatActivity {
     private Button buttonback;
     String resScan = null;
 
+    //permet de scanner et de décoder un QR code
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr);
 
+        //bouton retour à la fenêtre principale
         buttonback = (Button) findViewById(R.id.backToMainActivity);
         buttonback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,7 +36,6 @@ public class QrActivity extends AppCompatActivity {
         });
 
         scanQR();
-        System.out.println("Résultat du scan : " + resScan);
     }
 
     private void scanQR(){
@@ -48,11 +49,12 @@ public class QrActivity extends AppCompatActivity {
                 //resultat du scan
                 resScan = result.getText();
 
-                //Encapsulation du résultat pour transmission dans la vue suivante
+                //Encapsulation du résultat pour transmission dans la fenêtre suivante
                 Bundle bundle = new Bundle();
                 bundle.putString("id_decoded",resScan);
 
-                if (resScan.contains("bat_")){
+                //chargement du bon template en fonction du préfixe de l'id décodé
+                if (resScan.startsWith("bat_")){
                     //création de la nouvelle fenêtre
                     Intent detailviewactivity = new Intent(getApplicationContext(), DetailBatimentActivity.class);
 
@@ -63,7 +65,7 @@ public class QrActivity extends AppCompatActivity {
                     startActivity(detailviewactivity);
                     finish();
                 }
-                else if (resScan.contains("dep_")){
+                else if (resScan.startsWith("dep_")){
                     //création de la nouvelle fenêtre
                     Intent detailviewactivity = new Intent(getApplicationContext(), DetailDepartementActivity.class);
 
@@ -75,7 +77,7 @@ public class QrActivity extends AppCompatActivity {
                     finish();
                 }
 
-                else if (resScan.contains("al_")){
+                else if (resScan.startsWith("al_")){
                     //création de la nouvelle fenêtre
                     Intent detailviewactivity = new Intent(getApplicationContext(), DetailAutreLieuActivity.class);
 

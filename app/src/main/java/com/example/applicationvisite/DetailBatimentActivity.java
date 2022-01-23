@@ -29,7 +29,8 @@ public class DetailBatimentActivity extends AppCompatActivity {
     String idQrCode ="";
     String idBat="";
 
-    ArrayList<Batiment> listeBatiments = BDRepository.getBatimentsListe();
+    //ArrayList<Batiment> listeBatiments = BDRepository.getBatimentsListe();
+    ArrayList<Batiment> listeBatiments;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

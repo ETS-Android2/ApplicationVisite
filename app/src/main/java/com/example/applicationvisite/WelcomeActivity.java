@@ -11,6 +11,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
     private Button startbutton;
 
+    //Fenêtre d'acceuil de l'utilisateur
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

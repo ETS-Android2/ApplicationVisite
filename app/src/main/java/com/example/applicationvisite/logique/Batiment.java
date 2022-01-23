@@ -1,13 +1,6 @@
 package com.example.applicationvisite.logique;
 
-import com.google.firebase.database.IgnoreExtraProperties;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-
-@IgnoreExtraProperties
 public class Batiment implements Lieux{
-
 
     String bat_nom;
     String bat_id;

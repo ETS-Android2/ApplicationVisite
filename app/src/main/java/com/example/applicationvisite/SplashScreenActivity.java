@@ -20,13 +20,12 @@ import java.util.ArrayList;
 public class SplashScreenActivity extends AppCompatActivity {
 
     private final long BOOT_DELAY = 4000;
-    private static ArrayList<Batiment> sharedBatList;
-    private static ArrayList<Departement> sharedDepList;
-    private static ArrayList<AutreLieu> sharedAutreLieuList;
+    private static ArrayList<Batiment> sharedBatList = new ArrayList<>();
 
+    //redirige vers la page principale après 4 secondes de chargement
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //redirige vers la page principale après 4 secondes
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
@@ -34,45 +33,28 @@ public class SplashScreenActivity extends AppCompatActivity {
             //création des répertoires
             BDRepository bdRepository = new BDRepository();
 
-
-            //mise à jour liste
+            //mise à jour des listes de données
             bdRepository.updateDataBat();
             bdRepository.updateDataDep();
             bdRepository.updateDataAL();
 
-        //Chargement données de la visite
+        //Initialisation de la visite
         Visite v = Visite.getInstance();
-        Log.i("VISITE Instance", v.toString());
-
 
         //code éxécuté après les 4 secondes
         Runnable run = new Runnable() {
             @Override
             public void run() {
-                Intent welcomeActivity = new Intent(getApplicationContext(),WelcomeActivity.class);
-                startActivity(welcomeActivity);
-
-                //Collecte des données de la BD
-                sharedBatList = new ArrayList<>();
-                for (Batiment bat: bdRepository.getBatimentsListe()) {
+                Log.d(TAG, "TEST -> liste batiment fraichement dl" + BDRepository.getBatimentsListe());
+                //Collecte des données de la BD pour les batiments et copie de celle-ci dans une liste locale indépendante de la BD                sharedBatList = new ArrayList<>();
+                for (Batiment bat: BDRepository.getBatimentsListe()) {
                     Batiment copy = new Batiment(bat.getBat_nom(),bat.getBat_id(),bat.getBat_description(), bat.getBat_id_img(), bat.isVisited(), bat.getBat_liste_dep());
                     sharedBatList.add(copy);
                 }
                 Log.d(TAG, "___________Nouvelle liste partagée batiments_________" + sharedBatList);
 
-                sharedDepList = new ArrayList<>();
-                for (Departement dep: bdRepository.getDepartementsListe()) {
-                    Departement copy = new Departement(dep.getDep_nom(),dep.getDep_id(), dep.getDep_lienvideo(),dep.getDep_mapLocation(), dep.getDep_objectifs(),dep.getDep_candidature(), dep.getDep_organisation(), dep.getDep_alternance(), dep.getDep_contact(), dep.getDep_lienimg(), dep.getDep_nomplaquette(), dep.getDep_color_string());
-                    sharedDepList.add(copy);
-                }
-                Log.d(TAG, "___________Nouvelle liste partagée départements_________" + sharedDepList);
-
-                sharedAutreLieuList = new ArrayList<>();
-                for (AutreLieu al: bdRepository.getAutresLieuxListe()) {
-                    AutreLieu copy = new AutreLieu(al.getAl_nom(),al.getAl_id(),al.getAl_description(),al.getAl_lienvideo(),al.getHoraires(),al.getAl_mapLocation());
-                    sharedAutreLieuList.add(copy);
-                }
-                Log.d(TAG, "___________Nouvelle liste partagée autrelieux_________" + sharedAutreLieuList);
+                Intent welcomeActivity = new Intent(getApplicationContext(),WelcomeActivity.class);
+                startActivity(welcomeActivity);
                 finish();
             }
 

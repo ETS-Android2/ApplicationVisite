@@ -63,7 +63,7 @@ public class Visite {
     }
 
     private void remplirGraph(int liaisonsPremierBat[]){
-//Remplit automatiquement le graphe complet à partir de la première liste de liaisons
+        //Remplit automatiquement le graphe complet à partir de la première liste de liaisons
         //nouvelle ligne courante
         int newLiaisonsPremierBat[] = new int[liaisonsPremierBat.length];
         for (int u = 0; u < liaisonsPremierBat.length; u++) {

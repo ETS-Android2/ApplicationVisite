@@ -52,7 +52,6 @@ public class DetailAutreLieuActivity extends AppCompatActivity {
         for (AutreLieu al : listeAutreLieu) {
             if (idQrCode.contains(al.getAl_id())) {
                 displayed = true;
-                //bat.isVisited()=true;
                 TextView textView = findViewById(R.id.text_al_name);
                 textView.setText(al.getAl_nom());
                 //TODO faire la suite de l'affichage dynamique

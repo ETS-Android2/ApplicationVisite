@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton buttonForScanQR;
     private ImageButton infobutton;
 
+    //Fenêtre principale
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,16 +24,17 @@ public class MainActivity extends AppCompatActivity {
         buttonForScanQR = (FloatingActionButton) findViewById(R.id.qrButton);
         infobutton = (ImageButton) findViewById(R.id.infobutton);
 
+        //bouton de scan d'un QR code
         buttonForScanQR.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-
                 Intent qrActivity = new Intent(getApplicationContext(),QrActivity.class);
                 startActivity(qrActivity);
                 finish();
             }
         });
 
+        //bouton d'infos
         infobutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
