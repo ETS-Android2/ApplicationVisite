@@ -5,6 +5,7 @@
 -> Téléverser le fichier d'instalation .apk sur votre appareil androïd (ce fichier se trouve dans ./app/release/app-release.apk) <br />
 -> Installer l'application <br />
 -> Dans les paramètres de l'application, autoriser manuellement l'utilisation de la caméra <br />
+-> Désactiver le mode sombre du smartphone (si il en possède un) </br>
 -> Lancer l'application en étant connecté à internet 
 
 ## <span style="color:#ccccff"><b><u> II. Comment utiliser l'application ?</b></u>
