@@ -13,10 +13,10 @@
 -> Telecharger Android Studio <br />
 -> Installer les composants necessaires (jdk etc.) <br />
 -> Ouvrir le projet<br />
--> Activer le mode développeur sur son smartphone androïd
--> Activer le déboggage USB
--> Une fois connecté par USB à l'ordinateur, il sera possible de run l'app sur l'appareil connecté.
--> L'application va s'installer sur le smartphone et vous pourrez vous référer au I.
+-> Activer le mode développeur sur son smartphone androïd <br />
+-> Activer le déboggage USB <br />
+-> Une fois connecté par USB à l'ordinateur, il sera possible de run l'app sur l'appareil connecté <br />
+-> L'application va s'installer sur le smartphone et vous pourrez vous référer au I.<br />
 
 ## <span style="color:#ccccff"><b><u> III. Comment utiliser l'application ?</b></u>
 
